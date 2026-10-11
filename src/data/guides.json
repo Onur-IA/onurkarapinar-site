@@ -5,7 +5,8 @@
   "subtitle": "Comment transformer tes prompts récurrents en commandes automatiques sur Claude :",
   "date": "2026-04-22",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/ec88d8d2-5a69-4e45-b787-992c615bb0a6_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/claude-skills"
+  "url": "https://onurkarapinar.substack.com/p/claude-skills",
+  "desc": "Tu retapes les mêmes prompts ? Crée ton premier Skill Claude en 15 minutes : méthode pas à pas, exemples prêts à copier, zéro jargon."
  },
  {
   "slug": "claude-computer-use",
@@ -13,7 +14,8 @@
   "subtitle": "Comment configurer Computer Use et Dispatch pour déléguer des tâches à Claude depuis ton téléphone :",
   "date": "2026-04-15",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/b16431b4-afda-46fc-9a86-01c4cb8b601e_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/claude-computer-use"
+  "url": "https://onurkarapinar.substack.com/p/claude-computer-use",
+  "desc": "Claude peut cliquer, naviguer et remplir tes tableurs. Configuration de Dispatch pas à pas, cas concrets et limites honnêtes."
  },
  {
   "slug": "claude-cowork-project",
@@ -21,7 +23,8 @@
   "subtitle": "Comment configurer Claude pour qu'il se souvienne de toi ET fasse le travail (en 15 minutes) :",
   "date": "2026-04-08",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/eceedadd-a264-4234-b862-06d84a3fbb1a_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/claude-cowork-project"
+  "url": "https://onurkarapinar.substack.com/p/claude-cowork-project",
+  "desc": "Claude oublie tout à chaque session ? Avec les Projects dans Cowork, il garde ton contexte. 3 méthodes et 4 prompts à copier."
  },
  {
   "slug": "claude-guide-debutant",
@@ -29,7 +32,8 @@
   "subtitle": "Le guide pour installer Claude correctement (et ne plus jamais revenir à ChatGPT) :",
   "date": "2026-04-01",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/d9124a1b-642c-495d-b822-a5b502f7eeb1_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/claude-guide-debutant"
+  "url": "https://onurkarapinar.substack.com/p/claude-guide-debutant",
+  "desc": "Installation, réglages et premiers prompts : le guide simple pour bien démarrer avec Claude et ne plus jamais revenir en arrière."
  },
  {
   "slug": "fichier-voix-claude",
@@ -37,7 +41,8 @@
   "subtitle": "40 questions. 30 minutes. Et il ne sonne plus jamais générique.",
   "date": "2026-03-25",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/eca11020-0640-40d1-8515-92e4f9e4c2cf_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/fichier-voix-claude"
+  "url": "https://onurkarapinar.substack.com/p/fichier-voix-claude",
+  "desc": "40 questions, 30 minutes : crée le fichier qui apprend ton style à Claude. Prompts à copier-coller et méthode pas à pas."
  },
  {
   "slug": "claude-charts",
@@ -45,7 +50,8 @@
   "subtitle": "Comment créer des graphiques interactifs avec Claude (et ne plus jamais ouvrir Excel).",
   "date": "2026-03-22",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/bc701e09-74cd-47c7-bb62-0c776fd9bb1a_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/claude-charts"
+  "url": "https://onurkarapinar.substack.com/p/claude-charts",
+  "desc": "Transforme tes données en graphiques interactifs avec un seul prompt Claude. Exemples concrets et prompts prêts à l'emploi."
  },
  {
   "slug": "claude-cowork-guide-complet",
@@ -53,7 +59,8 @@
   "subtitle": "Avec le seul prompt dont tu as besoin, 6 cas d'usage concrets et les limites que personne ne montre.",
   "date": "2026-03-18",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/67111b24-cbb3-49d7-8c27-c2de4b378bce_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/claude-cowork-guide-complet"
+  "url": "https://onurkarapinar.substack.com/p/claude-cowork-guide-complet",
+  "desc": "Le seul prompt dont tu as besoin, 6 cas d'usage avec les prompts exacts, et les limites que personne ne montre."
  },
  {
   "slug": "fichier-contexte-claude",
@@ -61,7 +68,8 @@
   "subtitle": "Comment créer ton fichier contexte personnel et ne plus jamais recommencer à zéro",
   "date": "2026-03-11",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/ac971252-848c-4307-9507-48619b570087_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/fichier-contexte-claude"
+  "url": "https://onurkarapinar.substack.com/p/fichier-contexte-claude",
+  "desc": "Crée ton fichier contexte personnel pour que Claude te comprenne dès la première phrase. Modèle et prompts à copier."
  },
  {
   "slug": "nano-banana-2-le-guide-pour-bien",
@@ -69,7 +77,8 @@
   "subtitle": "Tout ce que tu peux faire avec le nouvel outil image de Google. Gratuit, en français.",
   "date": "2026-03-04",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/9721bd9f-c954-4750-a680-50ec1a906a1d_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/nano-banana-2-le-guide-pour-bien"
+  "url": "https://onurkarapinar.substack.com/p/nano-banana-2-le-guide-pour-bien",
+  "desc": "Tout ce que tu peux faire avec Nano Banana 2, l'outil image de Google : prompts, cas concrets et astuces. Gratuit, en français."
  },
  {
   "slug": "3-reglages-invisibles-qui-transforment",
@@ -77,7 +86,8 @@
   "subtitle": "Ce que 90 % des utilisateurs n'ont jamais activé (et comment le faire en 15 minutes)",
   "date": "2026-03-01",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/49023344-5194-49d6-83e5-12a806b423b4_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/3-reglages-invisibles-qui-transforment"
+  "url": "https://onurkarapinar.substack.com/p/3-reglages-invisibles-qui-transforment",
+  "desc": "90 % des utilisateurs ne les ont jamais activés. 3 réglages qui changent les réponses de ton IA, à faire en 15 minutes."
  },
  {
   "slug": "jai-refait-tout-mon-profil-linkedin",
@@ -85,7 +95,8 @@
   "subtitle": "10 sections. 3 heures. 2 prompts. Et tous les avant/après.",
   "date": "2026-02-25",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/fb49bee3-af1c-4258-b297-e6fe6be849cc_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/jai-refait-tout-mon-profil-linkedin"
+  "url": "https://onurkarapinar.substack.com/p/jai-refait-tout-mon-profil-linkedin",
+  "desc": "10 sections, 3 heures, 2 prompts : comment j'ai refait tout mon profil LinkedIn avec l'IA, avec tous les avant/après."
  },
  {
   "slug": "le-prompt-qui-transforme-claude-en",
@@ -93,6 +104,7 @@
   "subtitle": "9 étapes, 10 minutes, et tu ne prendras plus jamais une décision importante à l'instinct.",
   "date": "2026-02-21",
   "cover": "https://substack-post-media.s3.amazonaws.com/public/images/3cf608a5-689d-4e37-b21d-fb8b47b89315_1200x630.png",
-  "url": "https://onurkarapinar.substack.com/p/le-prompt-qui-transforme-claude-en"
+  "url": "https://onurkarapinar.substack.com/p/le-prompt-qui-transforme-claude-en",
+  "desc": "9 étapes, 10 minutes : le prompt qui transforme Claude en conseiller stratégique pour tes décisions importantes."
  }
 ]

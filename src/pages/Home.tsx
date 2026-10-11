@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"; import { Link } from "react-router-dom";
 import { Scribble, Arrow, A, SUB, AMAZON, PDF, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
-import { guides, GuideCard } from "../guides";
+import { guides, GuideCard, fdate, img } from "../guides";
+import { tools } from "../data/tools";
+import { ToolCard } from "./Outils";
 const prompts = [
   { t: "Ce que l'IA peut faire à ma place", s: "Trois tâches de ta semaine, déléguées.", p: "Pose-moi 5 questions sur mon travail, une par une. Ensuite, liste les 3 tâches de ma semaine que tu pourrais faire à ma place, avec le prompt exact pour chacune." },
   { t: "Mon mail le plus pénible", s: "Celui que tu repousses depuis trois jours.", p: "Je dois écrire un mail que je repousse depuis des jours. Pose-moi d'abord 3 questions : à qui, pourquoi, et ce que je crains. Puis rédige 2 versions courtes, une directe et une plus diplomate, et dis-moi laquelle tu enverrais à ma place." },
@@ -30,7 +32,8 @@ export default function Home() {
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ta semaine avec l'IA.</p>
           <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et le prompt à copier.</p>
           <div className="mt-6"><SubscribeForm/></div>
-          <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b> l'ouvrent déjà.</span></div>
+          <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex shrink-0 -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b>, 30 000 sur LinkedIn, auteur chez Eyrolles.</span></div>
+          <p className="mt-2 text-sm text-ink/70">Déjà abonné ? <Link to="/commencer-ici" className="inline-block py-3 font-bold text-terra underline underline-offset-4">Commence ici</Link></p>
         </Reveal>
         <Reveal delay={150} className="relative mx-auto w-full max-w-md">
           <div className="absolute inset-x-6 bottom-0 top-10 -rotate-3 rounded-[2.5rem] bg-terral"/>
@@ -58,21 +61,25 @@ export default function Home() {
         <div className="rounded-2xl bg-ink p-6 text-creme md:p-8">
           <div className="kicker !text-pale">{prompts[tab].t}</div>
           <pre className="mt-4 whitespace-pre-wrap font-mono text-[15px] leading-relaxed">{prompts[tab].p}</pre>
-          <div className="mt-6 flex flex-wrap items-center gap-3"><Copy text={prompts[tab].p}/><a className="btn-ghost !border-creme/40 !text-creme hover:!bg-creme hover:!text-ink" href="https://chatgpt.com/" target="_blank" rel="noopener">Ouvrir ChatGPT</a><a className="btn-ghost !border-creme/40 !text-creme hover:!bg-creme hover:!text-ink" href="https://claude.ai/new" target="_blank" rel="noopener">Ouvrir Claude</a></div>
-          <p className="mt-3 text-xs text-creme/60">Copie d'abord, puis colle dans ta conversation.</p>
+          <div className="mt-6 flex flex-wrap items-center gap-3"><Copy text={prompts[tab].p}/><a className="btn-ghost !border-creme/40 !text-creme hover:!bg-creme hover:!text-ink" href={"https://chatgpt.com/?q=" + encodeURIComponent(prompts[tab].p)} target="_blank" rel="noopener">Essayer dans ChatGPT</a><a className="btn-ghost !border-creme/40 !text-creme hover:!bg-creme hover:!text-ink" href={"https://claude.ai/new?q=" + encodeURIComponent(prompts[tab].p)} target="_blank" rel="noopener">Essayer dans Claude</a></div>
+          <p className="mt-3 text-xs text-creme/60">Le prompt s'ouvre déjà rempli. Sinon, copie-le et colle-le.</p>
         </div>
       </Reveal>
     </section>
-    <section className="bg-white"><div className="mx-auto max-w-6xl px-5 py-24">
+    <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
       <Reveal><div className="kicker">Apprendre l'IA, concrètement</div><h2 className="h2 mt-3">Ce que tu sauras faire.</h2>
         <p className="mt-3 max-w-2xl text-ink/70">Chaque compétence tient dans un guide. Tu le suis une fois, tu la gardes.</p></Reveal>
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{outcomes.map((o, i) => <Reveal key={o.u} delay={i * 80}><a href={o.u} className="card flex h-full flex-col p-6"><span className="font-display text-3xl font-extrabold text-terra">0{i + 1}</span><h3 className="mt-3 text-lg leading-snug">{o.t}</h3><p className="mt-2 text-[15px] text-ink/70">{o.d}</p><span className="mt-auto pt-4 text-sm font-bold text-terra">Le guide →</span></a></Reveal>)}</div>
     </div></section>
+    <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
+      <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Dans ta boîte mail</div><h2 className="h2 mt-3">Les dernières éditions.</h2><p className="mt-3 max-w-2xl text-ink/70">Voilà exactement ce que tu reçois, une à deux fois par semaine.</p></div><Link to="/guides" className="btn-ghost">Toutes les éditions</Link></Reveal>
+      <div className="mt-8 grid gap-5">{guides.slice(0, 3).map((g, i) => <Reveal key={g.slug} delay={i * 80}><a href={g.url} className="card grid items-center gap-5 p-5 sm:grid-cols-[200px_1fr]"><img src={img(g.cover, 400)} alt={`Couverture de l'édition ${g.title}`} loading="lazy" width="200" height="105" className="aspect-[1200/630] w-full rounded-2xl object-cover"/><div><div className="text-sm text-ink/60">{fdate(g.date)}</div><h3 className="mt-1 text-xl leading-snug">{g.title}</h3><p className="mt-2 text-[15px] text-ink/75">{g.desc || g.subtitle}</p><span className="mt-3 inline-block font-bold text-terra">Lire l'édition →</span></div></a></Reveal>)}</div>
+    </div></section>
     <section className="mx-auto max-w-6xl px-5 py-24">
-      <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Commence ici</div><h2 className="h2 mt-3">Les trois derniers guides.</h2></div><Link to="/guides" className="btn-ghost">Tous les guides</Link></Reveal>
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{guides.slice(0, 3).map((g, i) => <Reveal key={g.slug} delay={i * 100}><GuideCard g={g} big/></Reveal>)}</div>
+      <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Mes outils</div><h2 className="h2 mt-3">Ce que j'utilise vraiment.</h2></div><Link to="/outils" className="btn-ghost">Tous mes outils</Link></Reveal>
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{tools.map(t => <ToolCard key={t.n} t={t}/>)}</div>
     </section>
-    <section className="bg-sable/50"><div className="mx-auto max-w-6xl px-5 py-24">
+    <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
       <Reveal><div className="kicker">Ce qu'en disent les lecteurs</div><h2 className="h2 mt-3">Recopié tel quel, fautes comprises.</h2></Reveal>
       <div className="mt-10 columns-1 gap-5 md:columns-2 lg:columns-3">
         <Quote q="Depuis que je t'ai découvert (hier), j'ai créé 6 projets ! […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
@@ -92,7 +99,7 @@ export default function Home() {
         <p className="mt-6 border-l-4 border-terral pl-5 text-lg font-bold leading-snug">Ma règle : si ta mère ne peut pas s'en servir, j'ai raté mon édition.</p>
         <Link to="/a-propos" className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra">Lire mon histoire →</Link></Reveal>
     </section>
-    <section className="bg-white/60"><div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-24 md:grid-cols-[.6fr_1.4fr]">
+    <section className="bg-pale"><div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-24 md:grid-cols-[.6fr_1.4fr]">
       <Reveal><Link to="/livre"><img src={`${A}/livre-couverture.jpg`} alt="Couverture du livre Petites Habitudes, Grandes Réussites" loading="lazy" className="mx-auto w-48 -rotate-3 rounded shadow-2xl transition hover:rotate-0 md:w-60"/></Link></Reveal>
       <Reveal delay={100}><div className="kicker">Le livre</div><h2 className="h2 mt-3">Avant l'IA, j'ai écrit un livre sur les habitudes.</h2>
         <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 15 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>

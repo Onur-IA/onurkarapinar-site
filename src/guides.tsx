@@ -1,5 +1,5 @@
 import raw from "./data/guides.json";
-export type G = { slug: string; title: string; subtitle: string; date: string; cover: string; url: string };
+export type G = { slug: string; title: string; subtitle: string; date: string; cover: string; url: string; desc?: string };
 export const guides = raw as G[];
 export const cat = (g: G) => /linkedin/i.test(g.title) ? "LinkedIn" : /banana|graphique|chart/i.test(g.title + g.slug) ? "Images et visuels" : /cowork|computer|skills|projet|project/i.test(g.title + g.slug) ? "Automatiser" : /débutant|réglages|fichier|contexte|stratège/i.test(g.title + g.slug) ? "Bien démarrer" : "Bien démarrer";
 export const fdate = (d: string) => new Date(d).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });

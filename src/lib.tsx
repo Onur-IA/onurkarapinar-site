@@ -20,7 +20,7 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
 }
 export function SubscribeForm({ dark = false }: { dark?: boolean }) {
   return (
-    <form action={SUB} method="get" target="_blank" className="flex w-full max-w-md flex-col gap-2 sm:flex-row">
+    <form action={SUB} method="get" target="_blank" onSubmit={() => setTimeout(() => { window.location.href = "/merci"; }, 400)} className="flex w-full max-w-md flex-col gap-2 sm:flex-row">
       <label className="sr-only" htmlFor="em">Ton e-mail</label>
       <input id="em" name="email" type="email" required placeholder="Ton adresse e-mail" className={"min-w-0 flex-1 rounded-full border-2 px-5 py-3.5 outline-none transition focus:border-terra focus:ring-4 focus:ring-pale/60 " + (dark ? "border-creme/30 bg-transparent text-creme placeholder:text-creme/60" : "border-sable bg-white")}/>
       <button className="btn whitespace-nowrap">Je m'abonne</button>
