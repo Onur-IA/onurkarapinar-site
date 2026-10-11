@@ -6,7 +6,7 @@ import { ToolCard } from "./Outils";
 const prompts = [
   { t: "Ce que l'IA peut faire à ma place", s: "Trois tâches de ta semaine, déléguées.", p: "Pose-moi 5 questions sur mon travail, une par une. Ensuite, liste les 3 tâches de ma semaine que tu pourrais faire à ma place, avec le prompt exact pour chacune." },
   { t: "Mon mail le plus pénible", s: "Celui que tu repousses depuis trois jours.", p: "Je dois écrire un mail que je repousse depuis des jours. Pose-moi d'abord 3 questions : à qui, pourquoi, et ce que je crains. Puis rédige 2 versions courtes, une directe et une plus diplomate, et dis-moi laquelle tu enverrais à ma place." },
-  { t: "Mon prof particulier", s: "Comprendre n'importe quoi en 5 minutes.", p: "Explique-moi [un sujet qui me bloque] comme si j'avais 12 ans, avec un exemple de la vie quotidienne. Ensuite, pose-moi 3 questions pour vérifier que j'ai compris, une par une, et corrige-moi gentiment." },
+  { t: "Mon prof particulier", s: "Comprendre n'importe quoi en 5 minutes.", p: "Explique-moi [un sujet qui me bloque] comme si j'avais 12 ans, avec un exemple de la vie quotidienne. Ensuite, pose-moi 3 questions pour vérifier que j'ai compris, une par une, et corrige-moi gentiment." },
 ];
 const S = "https://onurkarapinar.substack.com/p/";
 const outcomes = [
@@ -18,21 +18,21 @@ const outcomes = [
 const logos = ["Challenge", "FrenchWeb", "Hubspot", "WTTJ", "Livementor", "Eyrolles"];
 const H = "/img";
 export default function Home() {
-  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
+  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
   const [tab, setTab] = useState(0);
   const full = prompts[0].p; const [n, setN] = useState(0);
   useEffect(() => { if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setN(full.length); return; } const t = setInterval(() => setN(x => x >= full.length + 40 ? 0 : x + 1), 38); return () => clearInterval(t); }, []);
   const typed = full.slice(0, Math.min(n, full.length));
   return (<>
     <section className="relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-pale/60 blur-3xl"/>
+      <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-pale/60 blur-3xl"/>
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20">
         <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
           <h1 className="mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]">L'IA, <Scribble>vraiment simple.</Scribble></h1>
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ton quotidien avec l'IA.</p>
-          <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et la méthode détaillée.</p>
+          <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et la méthode détaillée.</p>
           <div className="mt-6"><SubscribeForm/></div>
-          <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex shrink-0 -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b>, 30 000 sur LinkedIn, auteur chez Eyrolles.</span></div>
+          <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex shrink-0 -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b>, 30 000 sur LinkedIn, auteur chez Eyrolles.</span></div>
           <p className="mt-2 text-sm text-ink/70">Déjà abonné ? <Link to="/commencer-ici" className="inline-block py-3 font-bold text-terra underline underline-offset-4">Commence ici</Link></p>
         </Reveal>
         <Reveal delay={150} className="relative mx-auto w-full max-w-md">
@@ -40,14 +40,14 @@ export default function Home() {
           <img src={`${A}/portrait-collage-720.webp`} srcSet={`${A}/portrait-collage-440.webp 440w, ${A}/portrait-collage-720.webp 720w`} sizes="(min-width:768px) 420px, 88vw" width="720" height="697" fetchPriority="high" alt="Portrait d'Onur Karapinar" className="relative mx-auto w-[88%] drop-shadow-xl"/>
           <div className="floaty relative z-10 mx-auto -mt-6 w-[92%] rounded-2xl md:-mt-10 border border-sable bg-white p-4 shadow-2xl md:-left-12" style={{ ["--r" as any]: "-2deg" }}>
             <div className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-terral"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="ml-2 text-xs font-semibold text-ink/50">Ton prompt du jour</span></div>
-            <p className="caret mt-3 min-h-[3em] font-mono text-[13px] leading-snug">{typed}</p>
+            <p className="caret mt-3 min-h-[3em] font-mono text-[13px] leading-snug">{typed}</p>
           </div>
-          <div className="floaty absolute -right-2 top-6 rounded-2xl bg-ink px-4 py-3 text-creme shadow-xl md:-right-6" style={{ ["--r" as any]: "4deg", animationDelay: "1.5s" }}><div className="font-display text-2xl font-extrabold">10 min</div><div className="text-xs text-creme/70">par guide, montre en main</div></div>
+          <div className="floaty absolute -right-2 top-6 rounded-2xl bg-ink px-4 py-3 text-creme shadow-xl md:-right-6" style={{ ["--r" as any]: "4deg", animationDelay: "1.5s" }}><div className="font-display text-2xl font-extrabold">10 min</div><div className="text-xs text-creme/70">par guide, montre en main</div></div>
         </Reveal>
       </div>
     </section>
     <section className="border-y border-sable bg-white"><div className="mx-auto max-w-6xl px-5 py-12">
-      <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
+      <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
       <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/50">On a parlé de moi dans</div>
       <div className="mt-4 grid grid-cols-3 items-center gap-x-4 gap-y-2 md:grid-cols-6">{logos.map(l => <img key={l} src={`${H}/logos-${l}.png`} alt={`Logo ${l}`} loading="lazy" className="mx-auto h-20 w-auto transition hover:scale-105 md:h-24"/>)}</div>
     </div></section>
@@ -103,9 +103,9 @@ export default function Home() {
     <section className="bg-pale"><div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-24 md:grid-cols-[.6fr_1.4fr]">
       <Reveal><Link to="/livre"><img src={`${A}/livre-couverture.jpg`} alt="Couverture du livre Petites Habitudes, Grandes Réussites" loading="lazy" className="mx-auto w-48 -rotate-3 rounded shadow-2xl transition hover:rotate-0 md:w-60"/></Link></Reveal>
       <Reveal delay={100}><div className="kicker">Le livre</div><h2 className="h2 mt-3">Avant l'IA, j'ai écrit un livre sur les habitudes.</h2>
-        <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 15 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
+        <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 15 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
         <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link>{PDF && <a href={PDF} className="btn-ghost">Lire les 27 premières pages</a>}</div></Reveal>
     </div></section>
-    <CtaBand title="Le prochain guide IA arrive bientôt. Il t'attend." text="Apprendre l'IA simplement, 10 minutes par guide. Gratuit, une à deux fois par semaine, et pas de spam, je n'ai pas le temps non plus."/>
+    <CtaBand title="Le prochain guide IA arrive bientôt. Il t'attend." text="Apprendre l'IA simplement, 10 minutes par guide. Gratuit, une à deux fois par semaine, et pas de spam, je n'ai pas le temps non plus."/>
   </>);
 }

@@ -10,6 +10,6 @@ export default function Commencer() {
       <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">Trois guides pour <Scribble>bien démarrer</Scribble>.</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/80">Lis-les dans l'ordre. En une demi-heure, ton IA te connaît et répond mieux.</p></Reveal></section>
     <section className="mx-auto max-w-6xl px-5 pb-20"><ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{list.map((g, i) => <li key={g.slug}><div className="mb-3 font-display text-lg font-extrabold"><span className="text-terra">0{i + 1}</span> {why[i]}</div><GuideCard g={g}/></li>)}</ol></section>
-    <CtaBand title="Pas encore abonné ?" text="Une à deux fois par semaine, un guide de 10 minutes. Gratuit."/>
+    <CtaBand title="Pas encore abonné ?" text="Une à deux fois par semaine, un guide de 10 minutes. Gratuit."/>
   </>);
 }

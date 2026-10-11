@@ -23,6 +23,6 @@ export default function Outils() {
     {cats.map((k, i) => <section key={k} className={i % 2 ? "bg-pale" : ""}><div className="mx-auto max-w-6xl px-5 py-12">
       <h2 className="text-2xl">{k} <span className="text-base font-semibold text-ink/50">{all.filter(t => t.c === k).length}</span></h2>
       <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{all.filter(t => t.c === k).map(t => <ToolCard key={t.n} t={t}/>)}</div></div></section>)}
-    <CtaBand title="Un guide par outil, pas à pas." text="Une à deux fois par semaine, 10 minutes, gratuit."/>
+    <CtaBand title="Un guide par outil, pas à pas." text="Une à deux fois par semaine, 10 minutes, gratuit."/>
   </>);
 }
