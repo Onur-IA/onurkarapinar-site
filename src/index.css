@@ -35,3 +35,8 @@ body{font-size:17px;line-height:1.65} p{text-wrap:pretty}
 .book3d-top{display:none;position:absolute;top:0;left:0;width:100%;height:var(--t);background:repeating-linear-gradient(0deg,#FDFBF7 0 1.5px,#cfc5b3 1.5px 2.4px);transform-origin:top center;transform:translateZ(calc(var(--t)/2)) rotateX(90deg);width:98.5%}
 .book3d-shadow{position:absolute;left:8%;right:-6%;bottom:-6%;height:10%;background:radial-gradient(ellipse at center,rgba(43,43,43,.38),transparent 70%);filter:blur(6px);z-index:-1}
 @media (prefers-reduced-motion:reduce){.book3d-inner{transition:none}.book3d:hover .book3d-inner{transform:rotateY(-36deg) rotateX(3deg)}}
+
+.polaroid{position:relative;background:#fff;padding:12px 12px 18px;border-radius:4px;box-shadow:0 10px 30px -12px rgba(43,43,43,.35);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.polaroid:hover{transform:rotate(0) scale(1.03);box-shadow:0 18px 40px -14px rgba(43,43,43,.45);z-index:1}
+.polaroid .tape{position:absolute;top:-10px;left:50%;width:84px;height:22px;transform:translateX(-50%) rotate(-3deg);background:rgba(217,106,78,.35);border-radius:2px}
+@media (prefers-reduced-motion:reduce){.polaroid{transition:none}.polaroid:hover{transform:none}}
