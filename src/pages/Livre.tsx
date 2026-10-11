@@ -84,7 +84,7 @@ export default function Livre() {
       <a href={PDF || AMZ} rel={PDF ? undefined : amzRel} className="btn mt-7">{PDF ? "Lire l'extrait (PDF)" : "Feuilleter sur Amazon"}</a></Reveal></section>
     <section className="bg-pale"><div className="mx-auto max-w-5xl px-5 py-20"><Reveal><div className="kicker">Avis Amazon.fr, achats vérifiés</div><h2 className="h2 mt-3">Ce qu'en disent les lecteurs.</h2></Reveal>
       <div className="mt-8 grid gap-6 md:grid-cols-3">{reviews.map((r, i) => <Reveal key={r.a} delay={i * 100}><figure className="card h-full p-6"><Stars n={r.s}/><blockquote className="mt-3">« <Hl t={r.q}/> »</blockquote><figcaption className="mt-4 text-sm text-ink/60"><b className="text-ink">{r.a}</b>, Amazon.fr, {r.d}</figcaption></figure></Reveal>)}</div>
-      <a href={AMZ + "#customerReviews"} className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Lire les 364 avis sur Amazon</a>
+      <a href={AMZ + "#customerReviews"} rel={amzRel} className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Lire les 364 avis sur Amazon</a>
     </div></section>
     <section className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-20 md:grid-cols-[.6fr_1.4fr]"><Reveal><img src={`${A}/portrait-studio.webp`} alt="Portrait d'Onur Karapinar" width="640" height="640" loading="lazy" className="mx-auto w-full max-w-[260px] rotate-2 rounded-3xl shadow-xl"/></Reveal>
       <Reveal delay={100}><div className="kicker">L'auteur</div><h2 className="h2 mt-3">Qui l'a écrit.</h2>
