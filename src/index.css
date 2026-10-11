@@ -1,0 +1,10 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html{scroll-behavior:smooth} body{-webkit-font-smoothing:antialiased}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.btn{@apply inline-flex items-center justify-center rounded-full bg-terra px-6 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg}
+.btn-ghost{@apply inline-flex items-center justify-center rounded-full border-2 border-ink px-6 py-3 font-bold transition hover:bg-ink hover:text-creme}
+.kicker{@apply text-xs font-bold uppercase tracking-[.18em] text-terra}
+.h2{@apply text-3xl font-extrabold tracking-tight md:text-4xl}
+.card{@apply rounded-2xl border border-sable bg-white transition hover:-translate-y-1 hover:shadow-xl}
