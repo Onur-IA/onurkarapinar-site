@@ -1,8 +1,9 @@
 @tailwind base; @tailwind components; @tailwind utilities;
 html{scroll-behavior:smooth} body{-webkit-font-smoothing:antialiased}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease-out,transform .5s ease-out}
+.js .reveal.in,.js #main>:first-child .reveal{opacity:1;transform:none}
+.js #main>:first-child .reveal{transition:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 .btn{@apply inline-flex items-center justify-center gap-2 rounded-full bg-terra px-7 py-3.5 font-bold text-white shadow-[0_6px_0_#8f3c28] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_0_#8f3c28] active:translate-y-1 active:shadow-[0_2px_0_#8f3c28]}
 .btn-ghost{@apply inline-flex items-center justify-center rounded-full border-2 border-ink px-6 py-3 font-bold transition hover:bg-ink hover:text-creme}
 .kicker{@apply text-xs font-bold uppercase tracking-[.18em] text-terra}
