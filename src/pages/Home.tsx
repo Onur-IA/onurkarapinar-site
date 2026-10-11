@@ -22,9 +22,9 @@ export function HeroSection({ typed, title, h1 }: { typed: string; title?: React
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-pale/60 blur-3xl"/>
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20 [&>*]:min-w-0">
         <Reveal>
-          <h1 className={h1 ?? "text-[2.35rem] leading-[1.05] sm:text-[2.9rem] md:text-[4rem] lg:text-[4.4rem]"}>{title ?? <><span className="block text-[.62em] leading-tight text-ink/80">Salut, moi c'est Onur.</span><span className="mt-2 block">Je rends l'IA <Scribble>incroyablement simple.</Scribble></span></>}</h1>
+          <h1 className={h1 ?? "text-[2.05rem] leading-[1.08] min-[400px]:text-[2.3rem] sm:text-[2.9rem] md:text-[4rem] lg:text-[4.4rem]"}>{title ?? <><span className="block text-[.62em] leading-tight text-ink/80">Salut, moi c'est Onur.</span><span className="mt-2 block">Je rends l'IA <Scribble>incroyablement simple.</Scribble></span></>}</h1>
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ton quotidien avec l'IA.</p>
           <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et la méthode détaillée.</p>
           <div className="mt-6"><SubscribeForm/></div>
