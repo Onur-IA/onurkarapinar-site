@@ -10,6 +10,7 @@ export function useSeo(title: string, desc: string) {
     set('meta[name="description"]', "name=description", desc);
     set('meta[property="og:title"]', "property=og:title", title);
     set('meta[property="og:description"]', "property=og:description", desc);
+    const u = "https://www.onurkarapinar.com" + window.location.pathname; let c = document.querySelector('link[rel=canonical]') as HTMLLinkElement | null; if (!c) { c = document.createElement('link'); c.rel = 'canonical'; document.head.appendChild(c); } c.href = u; set('meta[property="og:url"]', 'property=og:url', u);
     window.scrollTo(0, 0);
   }, [title, desc]);
 }

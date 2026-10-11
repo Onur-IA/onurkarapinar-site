@@ -4,18 +4,18 @@ import Home from "./pages/Home"; import Livre from "./pages/Livre"; import AProp
 import Guides from "./pages/Guides"; import Merci from "./pages/Merci"; import NotFound from "./pages/NotFound";
 import Outils from "./pages/Outils"; import Commencer from "./pages/Commencer"; import Mentions from "./pages/Mentions";
 import { SUB } from "./lib";
-const nav = [["/commencer-ici", "Commencer ici"], ["/guides", "Guides"], ["/outils", "Outils"], ["/livre", "Le livre"], ["/a-propos", "À propos"]];
+const nav = [["/commencer-ici", "Commence ici"], ["/guides", "Guides"], ["/outils", "Outils"], ["/livre", "Livre"], ["/a-propos", "À propos"]];
 export default function App() {
   const [open, setOpen] = useState(false); const loc = useLocation(); useEffect(() => setOpen(false), [loc]);
   return (<div className="flex min-h-screen flex-col font-sans">
     <a href="#main" className="sr-only focus:not-sr-only">Aller au contenu</a>
     <header className="sticky top-0 z-40 border-b border-sable/70 bg-creme/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:grid md:grid-cols-[1fr_auto_1fr]">
         <Link to="/" className="inline-flex min-h-[44px] items-center text-lg font-extrabold tracking-tight">Onur<span className="text-terra">.</span></Link>
-        <nav className="hidden items-center gap-7 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           {nav.map(([to, l]) => <NavLink key={to} to={to} className={({ isActive }) => "inline-flex min-h-[44px] items-center " + (isActive ? "text-terra" : "hover:text-terra")}>{l}</NavLink>)}
-          <a href={SUB} className="btn !min-h-[44px] !px-5 !py-2 text-sm">Newsletter gratuite</a>
         </nav>
+        <div className="hidden justify-end md:flex"><a href={SUB} className="btn !min-h-[44px] !px-5 !py-2 text-sm">Newsletter gratuite</a></div>
         <button className="md:hidden grid h-11 w-11 place-items-center" aria-label="Menu" onClick={() => setOpen(!open)}><div className="space-y-1.5"><span className="block h-0.5 w-6 bg-ink"/><span className="block h-0.5 w-6 bg-ink"/><span className="block h-0.5 w-4 bg-ink"/></div></button>
       </div>
       {open && <nav className="flex flex-col gap-4 border-t border-sable px-5 py-5 text-lg font-medium md:hidden">
