@@ -4,7 +4,7 @@ import { guides, GuideCard } from "../guides";
 const picks = ["claude-guide-debutant", "fichier-contexte-claude", "3-reglages-invisibles-qui-transforment"];
 const why = ["Installer Claude et le régler correctement dès le départ.", "Lui donner ton contexte une fois pour toutes.", "Les réglages qui changent la qualité de toutes tes réponses."];
 export default function Commencer() {
-  useSeo("Commence ici | Onur Karapinar", "Nouveau ? Les 3 guides à lire en premier pour bien démarrer avec l'IA, en une demi-heure.");
+  useSeo("Commence ici | Onur Karapinar", "Nouveau ici ? Les 3 guides IA à lire en premier, dans l'ordre : en une demi-heure, ton IA te connaît et te répond mieux. Gratuit, sans jargon.");
   const list = picks.map(s => guides.find(g => g.slug === s)!).filter(Boolean);
   return (<>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-14 md:grid-cols-[1.1fr_.9fr] md:pt-20 [&>*]:min-w-0">
@@ -19,7 +19,7 @@ export default function Commencer() {
       <ol className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{list.map((g, i) => <li key={g.slug}><Reveal delay={i * 80}><div className="mb-3 font-display text-lg font-extrabold"><span className="text-terra">Étape {i + 1}</span><br/>{why[i]}</div><GuideCard g={g}/></Reveal></li>)}</ol>
       <Reveal className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2"><span className="font-bold">Tu as fini les trois ?</span><Link to="/guides" className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Explore tous les guides</Link><Link to="/outils" className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Vois les outils que j'utilise</Link></Reveal>
     </div></section>
-    <section className="mx-auto max-w-3xl px-5 py-16 text-center"><Reveal><blockquote className="text-xl leading-relaxed md:text-2xl">« Depuis que je t'ai découvert (hier), <b>j'ai créé 6 projets !</b> [...] C'est un peu enivrant ! Mais passionnant quand on commence à piger. »</blockquote><p className="mt-4 text-sm text-ink/60"><b className="text-ink">Le Hamac</b>, lecteur, à propos du fichier contexte Claude</p></Reveal></section>
+    <section className="mx-auto max-w-3xl px-5 py-16 text-center"><Reveal><blockquote className="text-xl leading-relaxed md:text-2xl">« Depuis que je t'ai découvert (hier), <b>j'ai créé 6 projets !</b> [...] C'est un peu enivrant ! Mais passionnant quand on commence à piger. »</blockquote><p className="mt-4 text-sm text-ink/70"><b className="text-ink">Le Hamac</b>, lecteur, à propos du fichier contexte Claude</p></Reveal></section>
     <CtaBand title="Pas encore abonné ?" text="Une à deux fois par semaine, un guide IA de 10 minutes. Gratuit, désinscription en un clic."/>
   </>);
 }

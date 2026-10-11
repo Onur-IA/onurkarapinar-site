@@ -3,7 +3,7 @@ import { guides, GuideCard } from "../guides";
 const picks = ["claude-guide-debutant", "fichier-contexte-claude", "3-reglages-invisibles-qui-transforment"];
 const P = "Pose-moi 5 questions sur mon travail, une par une. Ensuite, liste les 3 tâches de ma semaine que tu pourrais faire à ma place, avec le prompt exact pour chacune.";
 export default function Merci() {
-  useSeo("Presque fini | Onur Karapinar", "Confirme ton inscription dans l'e-mail que tu viens de recevoir.");
+  useSeo("Presque fini | Onur Karapinar", "Confirme ton inscription dans l'e-mail que tu viens de recevoir.", true);
   return <section className="mx-auto max-w-5xl px-5 py-20 text-center [&>div:first-child]:mx-auto [&>div:first-child]:max-w-2xl"><Reveal><div className="kicker">Presque fini</div>
     <h1 className="mt-3 text-4xl font-extrabold tracking-tight">Plus qu'un clic, et ta boîte mail devient un peu plus utile.</h1>
     <div className="card mt-10 p-8 text-left"><div className="kicker">Ta seule étape maintenant</div><h2 className="mt-2 text-2xl font-bold">Ouvre l'e-mail de confirmation et clique sur le lien.</h2>

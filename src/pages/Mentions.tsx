@@ -1,7 +1,7 @@
 import { useSeo } from "../lib";
 const X = ({ c }: { c: string }) => <mark className="rounded bg-pale px-1 font-semibold">[À compléter : {c}]</mark>;
 export default function Mentions() {
-  useSeo("Mentions légales | Onur Karapinar", "Mentions légales et données personnelles du site onurkarapinar.com.");
+  useSeo("Mentions légales | Onur Karapinar", "Mentions légales du site onurkarapinar.com : éditeur, hébergement, données personnelles, cookies, liens affiliés et contact. Tout est expliqué clairement.");
   return <section className="mx-auto max-w-3xl px-5 py-14 md:py-20 [&_h2]:mt-10 [&_h2]:text-2xl [&_p]:mt-3"><h1 className="text-4xl font-extrabold">Mentions légales</h1>
     <h2>Éditeur du site</h2><p>Onur Karapinar, <X c="statut juridique (ex. entrepreneur individuel)"/>, SIRET <X c="numéro SIRET"/>, adresse <X c="adresse postale"/>. Contact : <X c="adresse e-mail de contact"/>.</p>
     <p>Directeur de la publication : Onur Karapinar.</p>

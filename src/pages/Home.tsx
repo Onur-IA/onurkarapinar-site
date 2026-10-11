@@ -40,7 +40,7 @@ export default function Home() {
           <div className="absolute inset-x-6 bottom-0 top-10 -rotate-3 rounded-[2.5rem] bg-terral"/>
           <img src={`${A}/portrait-collage-720.webp`} srcSet={`${A}/portrait-collage-440.webp 440w, ${A}/portrait-collage-720.webp 720w`} sizes="(min-width:768px) 420px, 88vw" width="720" height="697" fetchPriority="high" alt="Portrait d'Onur Karapinar" className="relative mx-auto w-[88%] drop-shadow-xl"/>
           <div className="floaty relative z-10 mx-auto -mt-6 w-[92%] rounded-2xl md:-mt-10 border border-sable bg-white p-4 shadow-2xl md:-left-12" style={{ ["--r" as any]: "-2deg" }}>
-            <div className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-terral"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="ml-2 text-xs font-semibold text-ink/50">Ton prompt du jour</span></div>
+            <div className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-terral"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="ml-2 text-xs font-semibold text-ink/70">Ton prompt du jour</span></div>
             <p className="caret mt-3 min-h-[3em] font-mono text-[13px] leading-snug">{typed}</p>
           </div>
           <div className="floaty absolute -right-2 top-6 rounded-2xl bg-ink px-4 py-3 text-creme shadow-xl md:-right-6" style={{ ["--r" as any]: "4deg", animationDelay: "1.5s" }}><div className="font-display text-2xl font-extrabold">10 min</div><div className="text-xs text-creme/70">par guide, montre en main</div></div>
@@ -49,7 +49,7 @@ export default function Home() {
     </section>
     <section className="border-y border-sable bg-white"><div className="mx-auto max-w-6xl px-5 py-12">
       <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
-      <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/50">On a parlé de moi dans</div>
+      <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/70">On a parlé de moi dans</div>
       <div className="mt-4 grid grid-cols-3 items-center gap-x-6 gap-y-4 md:grid-cols-6">{logos.map(l => <div key={l} className="flex h-16 items-center justify-center"><img src={`${H}/logos-${l}.webp`} alt={`Logo ${l}`} loading="lazy" style={{ height: `${LOGO_H[l] ?? 28}px` }} className="w-auto max-w-[110px] object-contain transition hover:scale-105 md:max-w-[140px]"/></div>)}</div>
     </div></section>
     <section id="essaie" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24">
@@ -57,7 +57,7 @@ export default function Home() {
         <p className="mt-3 max-w-4xl text-ink/70">Copie-le, colle-le dans ChatGPT ou Claude. Si ça te fait sourire, <span className="whitespace-nowrap">imagine un guide entier.</span></p></Reveal>
       <Reveal className="mt-8 grid gap-5 md:grid-cols-[.8fr_1.2fr]">
         <div role="tablist" className="flex gap-3 overflow-x-auto pb-2 md:flex-col md:overflow-visible">
-          {prompts.map((p, i) => <button key={i} role="tab" aria-selected={tab === i} onClick={() => setTab(i)} className={"min-w-[220px] rounded-2xl border-2 p-4 text-left transition md:min-w-0 " + (tab === i ? "border-terra bg-white shadow-md" : "border-sable hover:border-ink/40")}><div className="font-bold">{p.t}</div><div className="text-sm text-ink/60">{p.s}</div></button>)}
+          {prompts.map((p, i) => <button key={i} role="tab" aria-selected={tab === i} onClick={() => setTab(i)} className={"min-w-[220px] rounded-2xl border-2 p-4 text-left transition md:min-w-0 " + (tab === i ? "border-terra bg-white shadow-md" : "border-sable hover:border-ink/40")}><div className="font-bold">{p.t}</div><div className="text-sm text-ink/70">{p.s}</div></button>)}
         </div>
         <div className="rounded-2xl bg-ink p-6 text-creme md:p-8">
           <div className="kicker !text-pale">{prompts[tab].t}</div>
@@ -74,12 +74,12 @@ export default function Home() {
     </div></section>
     <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
       <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Dans ta boîte mail</div><h2 className="h2 mt-3">Les dernières éditions.</h2><p className="mt-3 max-w-2xl text-ink/70">Voilà exactement ce que tu reçois, une à deux fois par semaine.</p></div><Link to="/guides" className="btn-ghost">Toutes les éditions</Link></Reveal>
-      <div className="mt-8 grid gap-5">{guides.slice(0, 3).map((g, i) => <Reveal key={g.slug} delay={i * 80}><a href={g.url} className="card grid items-center gap-5 p-5 sm:grid-cols-[200px_1fr]"><img src={img(g.cover, 400)} alt={`Couverture de l'édition ${g.title}`} loading="lazy" width="200" height="105" className="aspect-[1200/630] w-full rounded-2xl object-cover"/><div><div className="text-sm text-ink/60">{fdate(g.date)}</div><h3 className="mt-1 text-xl leading-snug">{g.title}</h3><p className="mt-2 text-[15px] text-ink/75">{g.desc || g.subtitle}</p><span className="mt-3 inline-block font-bold text-terra">Lire l'édition →</span></div></a></Reveal>)}</div>
+      <div className="mt-8 grid gap-5">{guides.slice(0, 3).map((g, i) => <Reveal key={g.slug} delay={i * 80}><a href={g.url} className="card grid items-center gap-5 p-5 sm:grid-cols-[200px_1fr]"><img src={img(g.cover, 400)} alt={`Couverture de l'édition ${g.title}`} loading="lazy" width="200" height="105" className="aspect-[1200/630] w-full rounded-2xl object-cover"/><div><div className="text-sm text-ink/70">{fdate(g.date)}</div><h3 className="mt-1 text-xl leading-snug">{g.title}</h3><p className="mt-2 text-[15px] text-ink/75">{g.desc || g.subtitle}</p><span className="mt-3 inline-block font-bold text-terra">Lire l'édition →</span></div></a></Reveal>)}</div>
     </div></section>
     <section className="mx-auto max-w-6xl px-5 py-24">
       <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Mes outils</div><h2 className="h2 mt-3">Ce que j'utilise vraiment.</h2></div><Link to="/outils" className="btn-ghost">Tous mes outils</Link></Reveal>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{tools.map(t => <ToolCard key={t.n} t={t}/>)}</div>
-      <p className="mt-4 text-sm text-ink/60">{DISCLOSURE}</p>
+      <p className="mt-4 text-sm text-ink/70">{DISCLOSURE}</p>
     </section>
     <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
       <Reveal><div className="kicker">Ce qu'en disent les lecteurs</div><h2 className="h2 mt-3">Recopié tel quel, fautes comprises.</h2></Reveal>

@@ -8,9 +8,10 @@ export const AMAZON = amz("2212572018");
 export const KINDLE = amz("B07PFLM9HD");
 // Extrait PDF : déposer le fichier dans public/ puis renseigner le chemin, ex. "/extrait-petites-habitudes.pdf"
 export const PDF = "/extrait-petites-habitudes-grandes-reussites.pdf";
-export function useSeo(title: string, desc: string) {
+export function useSeo(title: string, desc: string, noindex = false) {
   useEffect(() => {
     document.title = title;
+    { let r = document.querySelector('meta[name="robots"]'); if (noindex) { if (!r) { r = document.createElement("meta"); r.setAttribute("name", "robots"); document.head.appendChild(r); } r.setAttribute("content", "noindex, nofollow"); } else r?.remove(); }
     const set = (sel: string, attr: string, v: string) => { let m = document.querySelector(sel) as HTMLMetaElement | null; if (!m) { m = document.createElement("meta"); const [k, n] = attr.split("="); m.setAttribute(k, n); document.head.appendChild(m); } m.content = v; };
     set('meta[name="description"]', "name=description", desc);
     set('meta[property="og:title"]', "property=og:title", title);
@@ -43,7 +44,7 @@ export const Quote = ({ q, n, src, img }: { q: string; n: string; src: string; i
     <blockquote className="text-[15px] leading-relaxed">« <Hl t={q}/> »</blockquote>
     <figcaption className="mt-4 flex items-center gap-3 text-sm">
       {img ? <img src={img} alt={`Photo de ${n}`} loading="lazy" width="40" height="40" className="h-10 w-10 rounded-full object-cover"/> : <span className="grid h-10 w-10 place-items-center rounded-full bg-pale font-bold">{n[0]}</span>}
-      <span><b>{n}</b><br/><span className="text-ink/60">a commenté {src}</span></span>
+      <span><b>{n}</b><br/><span className="text-ink/70">a commenté {src}</span></span>
     </figcaption>
   </figure>
 );
