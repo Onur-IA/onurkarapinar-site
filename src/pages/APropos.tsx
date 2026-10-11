@@ -43,7 +43,7 @@ export default function APropos() {
   useSeo("À propos | Onur Karapinar", "Head of Content chez France IA, auteur chez Eyrolles, fondateur d'Aftermind et des Link Dinners. Curieux de tout, surtout des gens et de l'IA.");
   return (<>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.2fr_.8fr] md:py-20 [&>*]:min-w-0">
-      <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 break-words text-[2rem] font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">Curieux de tout. Surtout <Accent>des gens</Accent>. Et <Accent>de l'IA</Accent>.</h1>
+      <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 break-words text-[2rem] font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">Curieux de tout. Surtout <span className="whitespace-nowrap"><Accent>des gens</Accent>.</span> Et <span className="whitespace-nowrap"><Accent>de l'IA</Accent>.</span></h1>
         <p className="mt-5 text-lg text-ink/80">Head of Content chez France IA, auteur d'un best-seller, fondateur d'Aftermind et des Link Dinners. Ce que j'aime le plus : provoquer de l'<b>inattendu positif</b> autour de moi.</p>
         <div className="mt-7"><SubscribeForm/></div><p className="mt-3 text-sm text-ink/60">Ma newsletter Apprendre l'IA. Gratuit, 13 000 lecteurs.</p></Reveal>
       <Reveal delay={150}><img src={`${A}/portrait-collage-720.webp`} alt="Portrait d'Onur Karapinar" width="384" height="480" className="mx-auto w-full max-w-sm"/></Reveal>
