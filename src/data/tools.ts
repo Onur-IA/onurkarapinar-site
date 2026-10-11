@@ -1,21 +1,27 @@
-export type Tool = { n: string; d: string; u: string; guide?: string };
+export type Tool = { n: string; d: string; u: string; c: string; guide?: string; aff?: boolean };
 const S = "https://onurkarapinar.substack.com/p/";
-export const tools: Tool[] = [
-  { n: "Wispr Flow", d: "Je parle au lieu de taper, partout sur mon ordinateur. Mon outil principal.", u: "https://wisprflow.ai/" },
-  { n: "Claude", d: "L'assistant IA au cœur de la plupart de mes guides : contexte, Projects, Skills, Cowork.", u: "https://claude.ai/", guide: S + "claude-guide-debutant" },
-  { n: "Grok", d: "L'assistant IA de xAI, pour chercher et créer au quotidien.", u: "https://grok.com/" },
-  { n: "ChatGPT", d: "L'assistant le plus connu, pour tester les prompts du site en un clic.", u: "https://chatgpt.com/" },
-  { n: "Granola", d: "Il prend les notes de mes réunions pour que je reste dans la conversation.", u: "https://www.granola.ai/" },
-  { n: "Canva", d: "Mes couvertures de newsletter et mes visuels, avec son générateur d'images.", u: "https://www.canva.com/" },
+export const CATS = ["IA", "Écrire et dicter", "Créer", "Organiser", "Publier et construire"];
+export const all: Tool[] = [
+  { n: "Wispr Flow", c: "Écrire et dicter", d: "Mon outil principal. Je parle au lieu de taper, partout sur mon ordinateur.", u: "https://wisprflow.ai/r?ONUR80", aff: true },
+  { n: "Claude", c: "IA", d: "L'assistant IA au cœur de la plupart de mes guides : contexte, Projects, Skills, Cowork.", u: "https://claude.ai/", guide: S + "claude-guide-debutant" },
+  { n: "Grok", c: "IA", d: "L'assistant IA de xAI, pour chercher et créer au quotidien.", u: "https://grok.com/" },
+  { n: "ChatGPT", c: "IA", d: "L'assistant le plus connu, pour tester les prompts du site en un clic.", u: "https://chatgpt.com/" },
+  { n: "Gemini", c: "IA", d: "L'assistant IA de Google, utile aussi pour générer des images.", u: "https://gemini.google.com/", guide: S + "nano-banana-2-le-guide-pour-bien" },
+  { n: "Granola", c: "Écrire et dicter", d: "Il prend les notes de mes réunions pour que je reste dans la conversation.", u: "https://www.granola.ai/" },
+  { n: "Superwhisper", c: "Écrire et dicter", d: "Une autre app de dictée vocale, pour transformer ma voix en texte propre.", u: "https://superwhisper.com/" },
+  { n: "Canva", c: "Créer", d: "Mes couvertures de newsletter et mes visuels, avec son générateur d'images.", u: "https://www.canva.com/" },
+  { n: "CleanShot X", c: "Créer", d: "Les captures d'écran de mes guides, annotées en quelques secondes.", u: "https://cleanshot.com/" },
+  { n: "Notion", c: "Organiser", d: "Mon espace pour organiser mes projets et mon contenu.", u: "https://www.notion.com/" },
+  { n: "Obsidian", c: "Organiser", d: "Mon second cerveau : toutes mes notes, en fichiers simples.", u: "https://obsidian.md/" },
+  { n: "Todoist", c: "Organiser", d: "Ma liste de tâches, du quotidien aux projets.", u: "https://www.todoist.com/" },
+  { n: "Alfred", c: "Organiser", d: "Des raccourcis et des snippets sur Mac pour aller plus vite.", u: "https://www.alfredapp.com/" },
+  { n: "Substack", c: "Publier et construire", d: "La plateforme qui envoie ma newsletter Apprendre l'IA.", u: "https://substack.com/" },
+  { n: "Claude Code", c: "Publier et construire", d: "Pour construire des outils et des sites en décrivant ce que je veux.", u: "https://www.claude.com/product/claude-code" },
+  { n: "Cursor", c: "Publier et construire", d: "L'éditeur de code avec l'IA intégrée.", u: "https://cursor.com/" },
+  { n: "GitHub", c: "Publier et construire", d: "Là où vivent le code de ce site et mes notes versionnées.", u: "https://github.com/" },
+  { n: "Cloudflare", c: "Publier et construire", d: "L'hébergement de ce site, rapide et gratuit.", u: "https://www.cloudflare.com/" },
+  { n: "Stripe", c: "Publier et construire", d: "Pour encaisser les paiements en ligne.", u: "https://stripe.com/" },
 ];
-export const moreTools: Tool[] = [
-  { n: "Claude Code", d: "Pour construire des outils et des sites, comme celui-ci, en décrivant ce que je veux.", u: "https://www.claude.com/product/claude-code" },
-  { n: "Cursor", d: "L'éditeur de code avec l'IA intégrée.", u: "https://cursor.com/" },
-  { n: "Gemini", d: "L'assistant IA de Google, utile aussi pour générer des images.", u: "https://gemini.google.com/", guide: S + "nano-banana-2-le-guide-pour-bien" },
-  { n: "Obsidian", d: "Mon second cerveau : toutes mes notes, en fichiers simples.", u: "https://obsidian.md/" },
-  { n: "Notion", d: "Mon espace pour organiser mes projets et mon contenu.", u: "https://www.notion.com/" },
-  { n: "Todoist", d: "Ma liste de tâches, du quotidien aux projets.", u: "https://www.todoist.com/" },
-  { n: "Alfred", d: "Des raccourcis et des snippets sur Mac pour aller plus vite.", u: "https://www.alfredapp.com/" },
-  { n: "Substack", d: "La plateforme qui envoie ma newsletter Apprendre l'IA.", u: "https://substack.com/" },
-];
-export const DISCLOSURE = ""; // À activer plus tard : "Certains liens sont affiliés. Je ne recommande que des outils que j'utilise."
+const home = ["Wispr Flow", "Claude", "Grok", "ChatGPT", "Granola", "Canva"];
+export const tools = home.map(n => all.find(t => t.n === n)!);
+export const DISCLOSURE = "Certains liens sont affiliés. Je ne recommande que des outils que j'utilise.";
