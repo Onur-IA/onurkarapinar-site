@@ -1,7 +1,7 @@
 import { Routes, Route, NavLink, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home"; import Livre from "./pages/Livre"; import APropos from "./pages/APropos";
-import Guides from "./pages/Guides"; import Merci from "./pages/Merci"; import NotFound from "./pages/NotFound"; import Prompts from "./pages/Prompts"; import HeroTest from "./pages/HeroTest";
+import Guides from "./pages/Guides"; import Merci from "./pages/Merci"; import NotFound from "./pages/NotFound"; import Prompts from "./pages/Prompts";
 import Outils from "./pages/Outils"; import Commencer from "./pages/Commencer"; import Mentions from "./pages/Mentions";
 import { SUB } from "./lib";
 const nav = [["/commencer-ici", "Commence ici"], ["/guides", "Guides"], ["/outils", "Outils"], ["/livre", "Livre"], ["/a-propos", "À propos"]];
@@ -23,7 +23,7 @@ export default function App() {
     </header>
     <main id="main" className="flex-1"><Routes>
       <Route path="/" element={<Home/>}/><Route path="/livre" element={<Livre/>}/><Route path="/a-propos" element={<APropos/>}/>
-      <Route path="/guides" element={<Guides/>}/><Route path="/outils" element={<Outils/>}/><Route path="/commencer-ici" element={<Commencer/>}/><Route path="/hero-test" element={<HeroTest/>}/><Route path="/prompts" element={<Prompts/>}/><Route path="/mentions-legales" element={<Mentions/>}/><Route path="/merci" element={<Merci/>}/><Route path="*" element={<NotFound/>}/>
+      <Route path="/guides" element={<Guides/>}/><Route path="/outils" element={<Outils/>}/><Route path="/commencer-ici" element={<Commencer/>}/><Route path="/prompts" element={<Prompts/>}/><Route path="/mentions-legales" element={<Mentions/>}/><Route path="/merci" element={<Merci/>}/><Route path="*" element={<NotFound/>}/>
     </Routes></main>
     <footer className="bg-ink text-creme/80"><div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 text-sm md:grid-cols-3">
       <div><div className="text-lg font-extrabold text-creme">Onur<span className="text-terra">.</span></div><p className="mt-2">L'IA, vraiment simple. Un guide IA pas à pas de 10 minutes, une à deux fois par semaine.</p></div>

@@ -23,8 +23,8 @@ export function HeroSection({ typed, title, h1 }: { typed: string; title?: React
     <section className="relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-pale/60 blur-3xl"/>
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20">
-        <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
-          <h1 className={h1 ?? "mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]"}>{title ?? <>L'IA, <Scribble>vraiment simple.</Scribble></>}</h1>
+        <Reveal>
+          <h1 className={h1 ?? "text-[2.35rem] leading-[1.05] sm:text-[2.9rem] md:text-[4rem] lg:text-[4.4rem]"}>{title ?? <><span className="block text-[.62em] leading-tight text-ink/80">Salut, moi c'est Onur.</span><span className="mt-2 block">Je rends l'IA <Scribble>incroyablement simple.</Scribble></span></>}</h1>
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ton quotidien avec l'IA.</p>
           <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et la méthode détaillée.</p>
           <div className="mt-6"><SubscribeForm/></div>
@@ -45,7 +45,7 @@ export function HeroSection({ typed, title, h1 }: { typed: string; title?: React
   );
 }
 export default function Home() {
-  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
+  useSeo("Onur Karapinar | Je rends l'IA incroyablement simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
   const [tab, setTab] = useState(0);
   const full = prompts[0].p; const [n, setN] = useState(0);
   useEffect(() => { if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setN(full.length); return; } const t = setInterval(() => setN(x => x >= full.length + 40 ? 0 : x + 1), 38); return () => clearInterval(t); }, []);
