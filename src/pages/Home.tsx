@@ -17,6 +17,7 @@ const outcomes = [
 ];
 const logos = ["Challenge", "FrenchWeb", "Hubspot", "WTTJ", "Livementor", "Eyrolles"];
 const H = "/img";
+const LOGO_H: Record<string, number> = {"Challenge": 30.4, "Eyrolles": 30.1, "FrenchWeb": 26.8, "Hubspot": 32.1, "Livementor": 20.5, "WTTJ": 34.0};
 export default function Home() {
   useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
   const [tab, setTab] = useState(0);
@@ -49,7 +50,7 @@ export default function Home() {
     <section className="border-y border-sable bg-white"><div className="mx-auto max-w-6xl px-5 py-12">
       <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
       <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/50">On a parlé de moi dans</div>
-      <div className="mt-4 grid grid-cols-3 items-center gap-x-4 gap-y-2 md:grid-cols-6">{logos.map(l => <img key={l} src={`${H}/logos-${l}.png`} alt={`Logo ${l}`} loading="lazy" className="mx-auto h-20 w-auto transition hover:scale-105 md:h-24"/>)}</div>
+      <div className="mt-4 grid grid-cols-3 items-center gap-x-6 gap-y-4 md:grid-cols-6">{logos.map(l => <div key={l} className="flex h-16 items-center justify-center"><img src={`${H}/logos-${l}.webp`} alt={`Logo ${l}`} loading="lazy" style={{ height: `${LOGO_H[l] ?? 28}px` }} className="w-auto max-w-[110px] object-contain transition hover:scale-105 md:max-w-[140px]"/></div>)}</div>
     </div></section>
     <section id="essaie" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24">
       <Reveal><div className="kicker">Essaie, là, tout de suite</div><h2 className="h2 mt-3">Choisis un prompt. <Scribble>Regarde</Scribble> ce qui se passe. <Arrow/></h2>
