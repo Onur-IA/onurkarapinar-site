@@ -19,25 +19,7 @@ export default function NotFound() {
   const [q, setQ] = useState("");
   const res = q.trim().length > 1 ? all.map(it => ({ it, s: score(q, it) })).filter(x => x.s > 0.5).sort((a, b) => b.s - a.s).slice(0, 6).map(x => x.it) : [];
   return <section className="mx-auto max-w-2xl px-5 py-16 text-center md:py-20">
-    <svg viewBox="0 0 320 200" role="img" aria-label="Un voyageur avec une boussole devant un panneau indicateur, sur un chemin qui serpente" className="mx-auto h-auto w-full max-w-[340px]">
-      <rect x="0" y="0" width="320" height="200" rx="24" fill="#F5F1E8"/>
-      <circle cx="252" cy="52" r="20" fill="#D96A4E" opacity=".9"/>
-      <path d="M0 140 C 50 112, 90 124, 140 108 S 240 92, 320 112 L320 200 L0 200 Z" fill="#E8E2D6"/>
-      <path d="M0 162 C 60 146, 120 160, 180 146 S 270 136, 320 150 L320 200 L0 200 Z" fill="#DCD3C2"/>
-      <path d="M150 200 C 160 176, 120 166, 150 148 S 210 124, 196 108" fill="none" stroke="#FDFBF7" strokeWidth="10" strokeLinecap="round" strokeDasharray="1 16"/>
-      <g transform="translate(222 70)"><rect x="-3" y="0" width="6" height="58" rx="2" fill="#2B2B2B"/><path d="M-2 8 h38 l8 7 -8 7 h-38 z" fill="#C2553A"/><path d="M2 28 h-36 l-8 7 8 7 h36 z" fill="#2B2B2B"/><text x="16" y="19" fontSize="9" fontWeight="800" fill="#FDFBF7" textAnchor="middle" fontFamily="system-ui,sans-serif">IA</text><text x="-14" y="39" fontSize="8" fontWeight="800" fill="#FDFBF7" textAnchor="middle" fontFamily="system-ui,sans-serif">404</text></g>
-      <g className="wander"><g transform="translate(96 82)">
-        <circle cx="0" cy="0" r="9" fill="#2B2B2B"/>
-        <path d="M-10 -4 q10 -12 20 0 z" fill="#C2553A"/><rect x="-13" y="-5" width="26" height="3" rx="1.5" fill="#C2553A"/>
-        <path d="M-8 12 q8 -4 16 0 l3 28 h-22 z" fill="#2B2B2B"/>
-        <rect x="-17" y="14" width="10" height="20" rx="4" fill="#D96A4E"/>
-        <path d="M-6 40 l-5 22 M6 40 l6 22" stroke="#2B2B2B" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M6 18 l14 6" stroke="#2B2B2B" strokeWidth="4" strokeLinecap="round"/>
-        <g transform="translate(24 25)"><circle r="7" fill="#FDFBF7" stroke="#2B2B2B" strokeWidth="2"/><path className="needle" d="M0 -5 L2 0 L0 5 L-2 0 Z" fill="#C2553A"/></g>
-        <path d="M-20 0 l-6 64" stroke="#8a6b52" strokeWidth="3" strokeLinecap="round"/>
-      </g></g>
-      <path d="M40 60 q6 -6 12 0 q6 -6 12 0" fill="none" stroke="#2B2B2B" strokeWidth="2" strokeLinecap="round" opacity=".5"/>
-    </svg>
+    <img src="/img/404-errer.webp" width="960" height="484" alt="Un voyageur avec une boussole devant un panneau indicateur, sur un chemin qui serpente" fetchPriority="high" className="mx-auto h-auto w-full max-w-xl rounded-2xl"/>
     <div className="kicker mt-6">Erreur 404</div>
     <h1 className="mt-3 text-3xl font-extrabold md:text-4xl">Cette page s'est perdue en chemin.</h1>
     <blockquote className="mt-5 text-lg italic text-ink/80">« Tous ceux qui errent ne sont pas perdus. »<span className="mt-1 block text-sm not-italic text-ink/70">J.R.R. Tolkien</span></blockquote>
