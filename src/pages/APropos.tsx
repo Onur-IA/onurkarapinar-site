@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { A, useSeo, Reveal, SubscribeForm, Stats, CtaBand, Scribble, Hl } from "../lib";
 const LION1 = "https://medium.com/essentiels/ce-que-jai-appris-en-participant-%C3%A0-lion-la-formation-de-thefamily-pour-rejoindre-des-start-ups-b26ac45c6e7e", LION2 = "https://medium.com/join-lion/lion-saison-3-jour-1-bienvenue-dans-la-jungle-des-startups-3eeebb378e77";
@@ -21,6 +22,7 @@ const facts = [
   "J'ai bouclé Hyrox Paris en solo, pour ma toute première, ce qu'on déconseille en général. 2 h 00 min 41 s. Les 41 secondes, c'était pour le suspense.",
 ];
 const manies = [
+  "Je porte chance. Je suis très chanceux, alors autant en faire profiter les autres.",
   "Je parle beaucoup à mon ordinateur. Il répond, maintenant.",
     "Je mets mes proches en relation sans prévenir. Ça marche presque toujours.",
   "J'achète plus de livres que je n'en lis. J'appelle ça une bibliothèque d'avance.",
@@ -41,6 +43,7 @@ const album: [string, string, string][] = [
   ["album-medium-profil", "Profil Medium d'Onur affichant Writer chez Join Lion by The Family", "Mon profil Medium de l'époque : Writer @_JoinLion by @_TheFamily."],
 ];
 export default function APropos() {
+  const [more, setMore] = useState(false);
   useSeo("À propos | Onur Karapinar", "Head of Content chez France IA, auteur chez Eyrolles, fondateur d'Aftermind et des Link Dinners. Curieux de tout, surtout des gens et de l'IA.");
   return (<>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.2fr_.8fr] md:py-20 [&>*]:min-w-0">
@@ -61,13 +64,14 @@ export default function APropos() {
         <p>L'IA est la technologie la plus puissante jamais mise entre les mains de l'humanité. Et elle ne demande pas de savoir coder.</p>
         <p>Beaucoup ont raté le début d'Internet. Moi, j'étais trop jeune. Cette fois, on est pile à l'heure.</p>
         <p>La preuve : ce site, je l'ai codé avec l'IA, sans être développeur. Bien utilisée, c'est franchement addictif.</p></div></Reveal></div></section>
-    <section className="mx-auto max-w-6xl px-5 py-20"><Reveal><div className="kicker">Ce que je construis</div><h2 className="h2 mt-3">Je collectionne les gens brillants. Et je les mets à la même table.</h2></Reveal>
+    <section className="mx-auto max-w-6xl px-5 py-20"><Reveal><div className="kicker">Ce que je construis</div><h2 className="h2 mt-3">Je collectionne les gens brillants. Et je les mets à la même table.</h2><p className="mt-3 text-ink/70">Fondateur d'Aftermind et des Link Dinners : deux communautés, pas des business. Juste des gens bien, réunis.</p></Reveal>
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <Reveal><div className="card flex h-full flex-col overflow-hidden"><img src="/img/aftermind-shinko.webp" alt="Les membres d'Aftermind réunis pour le dîner d'anniversaire d'Onur au restaurant Shinko à Paris" loading="lazy" className="aspect-[4/3] w-full object-cover"/><div className="flex-1 p-7"><div className="text-sm font-bold uppercase tracking-wider text-terra">Depuis juin 2025</div><h3 className="mt-2 text-2xl font-extrabold">Aftermind</h3><p className="mt-3 text-ink/85"><Hl t="Entreprendre seul, c'est parfois très seul. Alors j'ai réuni **dix personnes que j'aimais bien**. Un dîner par mois, des lives d'entraide, puis l'ouverture sur recommandation. Aujourd'hui, **plus de 40 entrepreneurs indépendants brillants**."/></p><p className="mt-4 text-sm text-ink/60">Mon anniversaire avec Aftermind au Shinko. 18 à table.</p></div></div></Reveal>
         <Reveal delay={100}><div className="card flex h-full flex-col overflow-hidden"><img src="/img/album-diner-1.webp" alt="Les convives d'un Link Dinner réunis dans un restaurant à Paris" loading="lazy" className="aspect-[4/3] w-full object-cover"/><div className="flex-1 p-7"><div className="text-sm font-bold uppercase tracking-wider text-terra">Chaque mois</div><h3 className="mt-2 text-2xl font-extrabold">Les Link Dinners</h3><p className="mt-3 text-ink/85"><Hl t="Tout part d'un défi inspiré des recherches de Richard Wiseman sur la chance : dîner avec une centaine d'inconnus en trois mois grâce à Timeleft. Résultat : **120**. Depuis, chaque mois, **cinq à sept personnes sélectionnées** se retrouvent à une belle table à Paris."/></p><p className="mt-4 text-sm text-ink/60">19 h 30 : des inconnus se serrent la main. 23 h 30 : personne ne veut partir.</p></div></div></Reveal>
       </div></section>
     <section className="mx-auto max-w-6xl px-5 py-20"><Reveal><div className="kicker">L'album</div><h2 className="h2 mt-3">Quelques preuves que je n'invente rien.</h2></Reveal>
-      <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">{album.map(([src, alt, cap], i) => <Reveal key={src} delay={(i % 3) * 80}><figure className={`polaroid ${["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "-rotate-[1.5deg]", "rotate-[1.5deg]", "-rotate-1"][i % 7]}`}><span aria-hidden="true" className="tape"/><img src={`/img/${src}.webp`} alt={alt} loading="lazy" className={`aspect-[4/3] w-full ${src.startsWith("album-medium") ? "object-contain bg-creme" : "object-cover"}`}/><figcaption className="mt-3 text-center text-sm leading-snug text-ink/75">{cap}</figcaption></figure></Reveal>)}</div>
+      <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-4">{album.slice(0, more ? album.length : 4).map(([src, alt, cap], i) => <figure key={src} className={`polaroid !p-2 !pb-3 ${["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "-rotate-[1.5deg]", "rotate-[1.5deg]", "-rotate-1", "rotate-1"][i % 8]}`}><span aria-hidden="true" className="tape"/><img src={`/img/${src}.webp`} alt={alt} loading="lazy" className={`aspect-[4/3] w-full ${src.startsWith("album-medium") ? "object-contain bg-creme" : "object-cover"}`}/><figcaption className="mt-2 text-center text-xs leading-snug text-ink/75 sm:text-sm">{cap}</figcaption></figure>)}</div>
+      {album.length > 4 && <div className="mt-10 text-center"><button onClick={() => setMore(!more)} aria-expanded={more} className="btn-ghost">{more ? "Voir moins" : `Voir plus de photos (${album.length - 4})`}</button></div>}
     </section>
     <section className="bg-pale"><div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-20 md:grid-cols-[.8fr_1.2fr]">
       <Reveal><figure><img src="/img/hyrox-paris.webp" alt="Onur à l'arrivée de Hyrox Paris, devant l'écran affichant 2:00:41" width="640" height="961" loading="lazy" className="mx-auto w-full max-w-xs rounded-2xl shadow-xl"/><figcaption className="mt-3 text-center text-sm text-ink/60">Hyrox Paris, en solo, pour une première. 2:00:41. Le sourire dit tout.</figcaption></figure></Reveal>
