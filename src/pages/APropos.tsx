@@ -42,12 +42,12 @@ const album: [string, string, string][] = [
   ["album-medium-profil", "Profil Medium d'Onur affichant Writer chez Join Lion by The Family", "Mon profil Medium de l'époque : Writer @_JoinLion by @_TheFamily."],
 ];
 export default function APropos() {
-  useSeo("À propos | Onur Karapinar", "Head of Content chez France IA, auteur chez Eyrolles, fondateur d'Aftermind et des Link Dinners. Âme d'artiste, corps d'athlète, esprit d'entrepreneur : créateur d'inattendu positif.");
+  useSeo("À propos | Onur Karapinar", "Head of Content chez France IA, auteur chez Eyrolles, fondateur d'Aftermind et des Link Dinners. Curieux de tout, surtout des gens et de l'IA.");
   return (<>
-    <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.2fr_.8fr] md:py-20">
-      <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">Âme d'artiste. Corps d'athlète. <Scribble>J'agis comme un entrepreneur.</Scribble></h1>
-        <p className="mt-5 text-lg text-ink/80">Head of Content chez France IA, auteur d'un best-seller, fondateur d'Aftermind et des Link Dinners, patron d'une équipe d'employés IA. Mon métier, au fond : <b>créateur d'inattendu positif</b>.</p>
-        <p className="mt-2 text-sm text-ink/60">L'expression vient d'une conférence de Philippe Gabilliet sur la chance. Je l'ai adoptée.</p>
+    <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.2fr_.8fr] md:py-20 [&>*]:min-w-0">
+      <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 break-words text-[2rem] font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">Curieux de tout. Surtout des gens. <Scribble>Et de l'IA.</Scribble></h1>
+        <p className="mt-5 text-lg text-ink/80">Head of Content chez France IA, auteur d'un best-seller, fondateur d'Aftermind et des Link Dinners, patron d'une équipe d'employés IA. Ce que j'aime le plus : provoquer de l'<b>inattendu positif</b> autour de moi.</p>
+        <p className="mt-2 text-sm text-ink/60">Une expression empruntée à une conférence de Philippe Gabilliet sur la chance.</p>
         <div className="mt-7"><SubscribeForm/></div><p className="mt-3 text-sm text-ink/60">Ma newsletter Apprendre l'IA. Gratuit, 13 000 lecteurs.</p></Reveal>
       <Reveal delay={150}><img src={`${A}/portrait-collage-720.webp`} alt="Portrait d'Onur Karapinar" width="384" height="480" className="mx-auto w-full max-w-sm"/></Reveal>
     </section>
