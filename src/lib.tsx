@@ -37,7 +37,7 @@ export function Copy({ text, label = "Copier le prompt" }: { text: string; label
   const [ok, setOk] = useState(false);
   return <button type="button" className="btn" onClick={async () => { try { await navigator.clipboard.writeText(text); } catch { const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); } setOk(true); setTimeout(() => setOk(false), 2000); }}>{ok ? "Copié !" : label}</button>;
 }
-export const Hl = ({ t }: { t: string }) => <>{t.split(/(\*\*[^*]+\*\*)/).map((p, i) => p.startsWith("**") ? <span key={i} className="underline decoration-terral decoration-[3px] underline-offset-4 [text-decoration-skip-ink:none]">{p.slice(2, -2)}</span> : p)}</>;
+export const Hl = ({ t }: { t: string }) => <>{t.split(/(\*\*[^*]+\*\*)/).map((p, i) => p.startsWith("**") ? <span key={i} className="hl">{p.slice(2, -2)}</span> : p)}</>;
 export const Quote = ({ q, n, src, img }: { q: string; n: string; src: string; img?: string }) => (
   <figure className="card mb-5 break-inside-avoid p-7 hover:-rotate-[.6deg]">
     <blockquote className="text-[15px] leading-relaxed">« <Hl t={q}/> »</blockquote>
@@ -53,5 +53,5 @@ export const Stats = ({ items }: { items: [string, string][] }) => (
 export function CtaBand({ title, text }: { title: string; text: string }) {
   return <section className="bg-ink text-creme"><div className="mx-auto max-w-3xl px-5 py-20 text-center"><Reveal><h2 className="h2">{title}</h2><p className="mx-auto mt-4 max-w-xl text-creme/80">{text}</p><div className="mt-8 flex justify-center"><SubscribeForm dark/></div></Reveal></div></section>;
 }
-export const Scribble = ({ children }: { children: ReactNode }) => <span className="scribble">{children}<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C 40 4, 80 18, 120 9 S 180 6, 198 12" fill="none" stroke="#D96A4E" strokeWidth="5" strokeLinecap="round"/></svg></span>;
+export const Scribble = ({ children }: { children: ReactNode }) => <span className="hl hl-title">{children}</span>;
 export const Arrow = () => <svg width="60" height="40" viewBox="0 0 60 40" aria-hidden="true" className="hidden md:inline-block text-terral"><path d="M4 6 C 20 30, 36 34, 54 26 M44 20 L55 26 L46 34" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
