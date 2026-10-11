@@ -41,6 +41,12 @@ const reviews = [
   { a: "Arnaud M", d: "4 août 2019", s: 5, q: "Ce livre n'est ni une histoire passionnante, ni une innovation extraordinaire. En revanche, je pense que c'est **une mine d'or** pour toute personne voulant améliorer sa vie." },
   { a: "Veyrat Marine", d: "23 août 2019", s: 5, q: "Chaque habitude est présentée de manière très pédagogique, en exposant ses bienfaits et des **conseils de mise en application immédiate**." },
 ];
+const FNAC = "https://www.fnac.com/a13185949/Onur-Karapinar-Petites-habitudes-grandes-reussites";
+const fnac = [
+  { a: "Yamina F.", d: "15 mars 2019", v: true, q: "Ce livre est simplement génial. [...] Ce n'est pas du bla-bla en long, en large et en travers comme beaucoup de livres de développement personnel célèbres. **On va à l'essentiel avec des conseils très pertinents.**" },
+  { a: "Vanessa G.", d: "7 juillet 2019", v: false, q: "Ici, Onur Karapinar donne **toutes les étapes à franchir par petits paliers** (comme ça, cela paraît moins insurmontable)." },
+  { a: "Régine B.", d: "11 mars 2019", v: false, q: "Un livre très documenté, instructif, concret, **avec un brin d’humour** qui en fait une lecture passionnante et nécessaire pour tous ceux et celles qui souhaitent évoluer et changer leur vie personnelle ou professionnelle !" },
+];
 const faq = [
   ["C'est pour qui ?", "Pour toi si tu veux prendre de bonnes habitudes, te défaire de celles qui te coûtent, ou si tu veux changer sans savoir par où commencer."],
   ["Faut-il le lire dans l'ordre ?", "Les trois premières parties posent la méthode, mieux vaut les lire d'abord. Les 51 habitudes de la partie IV se piochent ensuite selon tes envies."],
@@ -85,7 +91,10 @@ export default function Livre() {
       {PDF && <Reveal className="mt-12"><a href={PDF} aria-label="Ouvrir l'extrait PDF"><img src="/img/extrait-double-page.webp" alt="Double page d'ouverture de l'introduction du livre : Tout commence par nos habitudes" width="1100" height="778" loading="lazy" className="mx-auto w-full rounded-lg border border-sable shadow-2xl transition hover:-translate-y-1"/></a></Reveal>}</section>
     <section className="bg-pale"><div className="mx-auto max-w-5xl px-5 py-20"><Reveal><div className="kicker">Avis Amazon.fr, achats vérifiés</div><h2 className="h2 mt-3">Ce qu'en disent les lecteurs.</h2></Reveal>
       <div className="mt-8 grid gap-6 md:grid-cols-3">{reviews.map((r, i) => <Reveal key={r.a} delay={i * 100}><figure className="card h-full p-6"><Stars n={r.s}/><blockquote className="mt-3">« <Hl t={r.q}/> »</blockquote><figcaption className="mt-4 text-sm text-ink/60"><b className="text-ink">{r.a}</b>, Amazon.fr, {r.d}</figcaption></figure></Reveal>)}</div>
-      <a href={AMZ + "#customerReviews"} rel={amzRel} className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Lire les 364 avis sur Amazon</a>
+      <h3 className="mt-14 text-2xl">Avis Fnac <span className="text-base font-semibold text-ink/60">· 14 avis, 4,9 / 5</span></h3>
+      <div className="mt-6 grid gap-6 md:grid-cols-3">{fnac.map(r => <figure key={r.a} className="card h-full p-6"><Stars n={5}/><blockquote className="mt-3">« <Hl t={r.q}/> »</blockquote><figcaption className="mt-4 text-sm text-ink/60"><b className="text-ink">{r.a}</b>, Avis Fnac, {r.d}{r.v ? ", achat vérifié" : ""}</figcaption></figure>)}</div>
+      <div className="mt-6 flex flex-wrap gap-x-6"><a href={FNAC} target="_blank" rel="noopener" className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Lire les avis sur la Fnac</a>
+      <a href={AMZ + "#customerReviews"} rel={amzRel} className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Lire les 364 avis sur Amazon</a></div>
     </div></section>
     <section className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-20 md:grid-cols-[.6fr_1.4fr]"><Reveal><img src={`${A}/portrait-studio.webp`} alt="Portrait d'Onur Karapinar" width="640" height="640" loading="lazy" className="mx-auto w-full max-w-[260px] rotate-2 rounded-3xl shadow-xl"/></Reveal>
       <Reveal delay={100}><div className="kicker">L'auteur</div><h2 className="h2 mt-3">Qui l'a écrit.</h2>
