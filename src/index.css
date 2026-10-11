@@ -49,3 +49,4 @@ body{font-size:17px;line-height:1.65} p{text-wrap:pretty}
 
 :root .text-terra{color:#A8472F}
 :root .kicker{color:#A8472F}
+.wander{animation:bob 3.2s ease-in-out infinite}.needle{transform-box:fill-box;transform-origin:center;animation:needle 4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-2px)}}@keyframes needle{0%,100%{transform:rotate(-25deg)}50%{transform:rotate(30deg)}}@media (prefers-reduced-motion:reduce){.wander,.needle{animation:none}}

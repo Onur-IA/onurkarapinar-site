@@ -23,7 +23,7 @@ export default function App() {
     </header>
     <main id="main" className="flex-1"><Routes>
       <Route path="/" element={<Home/>}/><Route path="/livre" element={<Livre/>}/><Route path="/a-propos" element={<APropos/>}/>
-      <Route path="/guides" element={<Guides/>}/><Route path="/outils" element={<Outils/>}/><Route path="/commencer-ici" element={<Commencer/>}/><Route path="/prompts-brouillon" element={<Prompts/>}/><Route path="/mentions-legales" element={<Mentions/>}/><Route path="/merci" element={<Merci/>}/><Route path="*" element={<NotFound/>}/>
+      <Route path="/guides" element={<Guides/>}/><Route path="/outils" element={<Outils/>}/><Route path="/commencer-ici" element={<Commencer/>}/><Route path="/prompts" element={<Prompts/>}/><Route path="/mentions-legales" element={<Mentions/>}/><Route path="/merci" element={<Merci/>}/><Route path="*" element={<NotFound/>}/>
     </Routes></main>
     <footer className="bg-ink text-creme/80"><div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 text-sm md:grid-cols-3">
       <div><div className="text-lg font-extrabold text-creme">Onur<span className="text-terra">.</span></div><p className="mt-2">L'IA, vraiment simple. Un guide IA pas à pas de 10 minutes, une à deux fois par semaine.</p></div>

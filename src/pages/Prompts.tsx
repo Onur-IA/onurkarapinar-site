@@ -64,7 +64,7 @@ const top: { t: string; p: string; r: string }[] = [
 const enc = encodeURIComponent;
 const Try = ({ p }: { p: string }) => <><a href={"https://chatgpt.com/?q=" + enc(p)} target="_blank" rel="noopener" className="inline-flex min-h-[44px] items-center text-sm font-bold text-terra underline underline-offset-4">Essayer dans ChatGPT</a><a href={"https://claude.ai/new?q=" + enc(p)} target="_blank" rel="noopener" className="inline-flex min-h-[44px] items-center text-sm font-bold text-terra underline underline-offset-4">Essayer dans Claude</a></>;
 export default function Prompts() {
-  useSeo("50 prompts IA qui font gagner 1 h par jour | Onur Karapinar", "50 prompts IA en français, gratuits, classés par usage : e-mails, résumés, réunions, écriture, apprentissage. Copie, colle, gagne du temps.", true);
+  useSeo("50 prompts IA qui font gagner 1 h par jour | Onur Karapinar", "50 prompts IA en français, gratuits, classés par usage : e-mails, résumés, réunions, écriture, apprentissage. Copie, colle, gagne du temps.");
   const [cat, setCat] = useState("Tous");
   const list = cat === "Tous" ? prompts : prompts.filter(p => p.c === cat);
   return (<>
