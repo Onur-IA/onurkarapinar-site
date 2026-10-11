@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p . && vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll",
+    "build": "tsc -p . && vite build && node prerender.mjs",
     "dev": "vite",
     "data": "curl -s 'https://onurkarapinar.substack.com/api/v1/archive?limit=50' > /tmp/a.json"
   },
