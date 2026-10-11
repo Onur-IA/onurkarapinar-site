@@ -7,7 +7,7 @@ export const amzRel = AMAZON_TAG ? "sponsored noopener" : "noopener";
 export const AMAZON = amz("2212572018");
 export const KINDLE = amz("B07PFLM9HD");
 // Extrait PDF : déposer le fichier dans public/ puis renseigner le chemin, ex. "/extrait-petites-habitudes.pdf"
-export const PDF = "";
+export const PDF = "/extrait-petites-habitudes-grandes-reussites.pdf";
 export function useSeo(title: string, desc: string) {
   useEffect(() => {
     document.title = title;
