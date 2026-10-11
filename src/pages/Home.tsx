@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"; import { Link } from "react-router-dom";
 import { Scribble, Arrow, A, SUB, AMAZON, PDF, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
 import { guides, GuideCard, fdate, img } from "../guides";
-import { tools } from "../data/tools";
+import { tools, DISCLOSURE } from "../data/tools";
 import { ToolCard } from "./Outils";
 const prompts = [
   { t: "Ce que l'IA peut faire à ma place", s: "Trois tâches de ta semaine, déléguées.", p: "Pose-moi 5 questions sur mon travail, une par une. Ensuite, liste les 3 tâches de ma semaine que tu pourrais faire à ma place, avec le prompt exact pour chacune." },
@@ -78,6 +78,7 @@ export default function Home() {
     <section className="mx-auto max-w-6xl px-5 py-24">
       <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Mes outils</div><h2 className="h2 mt-3">Ce que j'utilise vraiment.</h2></div><Link to="/outils" className="btn-ghost">Tous mes outils</Link></Reveal>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{tools.map(t => <ToolCard key={t.n} t={t}/>)}</div>
+      <p className="mt-4 text-sm text-ink/60">{DISCLOSURE}</p>
     </section>
     <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
       <Reveal><div className="kicker">Ce qu'en disent les lecteurs</div><h2 className="h2 mt-3">Recopié tel quel, fautes comprises.</h2></Reveal>
