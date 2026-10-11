@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { A, PDF, useSeo, Reveal, CtaBand, Scribble, Hl, AMAZON as AMZ, KINDLE, amzRel } from "../lib";
 import { Book3D } from "../Book3D";
+const SAMPLE = "https://www.amazon.fr/dp/2212572018?tag=medium-ok-21&asin=B07PFLM9HD&revisionId=ffc710b0&format=3&depth=1";
 const buy = [
   { n: "Amazon", f: "Broché", u: AMZ, a: true }, { n: "Amazon", f: "Kindle", u: KINDLE, a: true },
   { n: "Fnac", f: "Broché", u: "https://www.fnac.com/a13185949/Onur-Karapinar-Petites-habitudes-grandes-reussites" },
@@ -87,7 +88,8 @@ export default function Livre() {
     </div></section>
     <section className="mx-auto max-w-3xl px-5 py-20 text-center"><Reveal><div className="kicker">Gratuit, sans e-mail</div><h2 className="h2 mt-3">{PDF ? "Lis les 27 premières pages." : "Feuillette le début."}</h2>
       <p className="mt-4 text-ink/80">Pas envie d'acheter un livre sur la foi d'une page web ? Moi non plus. Feuillette le début. Si tu te surprends à souligner une phrase, tu sais ce qu'il te reste à faire.</p>
-      <a href={PDF || AMZ} rel={PDF ? undefined : amzRel} className="btn mt-7">{PDF ? "Lire l'extrait (PDF)" : "Feuilleter sur Amazon"}</a></Reveal>
+      <a href={PDF || AMZ} rel={PDF ? undefined : amzRel} className="btn mt-7">{PDF ? "Lire les 27 premières pages" : "Feuilleter sur Amazon"}</a>
+      {PDF && <p className="mt-4"><a href={SAMPLE} target="_blank" rel="sponsored noopener" className="inline-flex min-h-[44px] items-center font-semibold text-terra underline underline-offset-4">Feuilleter sur Amazon</a></p>}</Reveal>
       {PDF && <Reveal className="mt-12"><a href={PDF} aria-label="Ouvrir l'extrait PDF"><img src="/img/extrait-double-page.webp" alt="Double page d'ouverture de l'introduction du livre : Tout commence par nos habitudes" width="1100" height="778" loading="lazy" className="mx-auto w-full rounded-lg border border-sable shadow-2xl transition hover:-translate-y-1"/></a></Reveal>}</section>
     <section className="bg-pale"><div className="mx-auto max-w-5xl px-5 py-20"><Reveal><div className="kicker">Avis Amazon.fr, achats vérifiés</div><h2 className="h2 mt-3">Ce qu'en disent les lecteurs.</h2></Reveal>
       <div className="mt-8 grid gap-6 md:grid-cols-3">{reviews.map((r, i) => <Reveal key={r.a} delay={i * 100}><figure className="card h-full p-6"><Stars n={r.s}/><blockquote className="mt-3">« <Hl t={r.q}/> »</blockquote><figcaption className="mt-4 text-sm text-ink/60"><b className="text-ink">{r.a}</b>, Amazon.fr, {r.d}</figcaption></figure></Reveal>)}</div>
