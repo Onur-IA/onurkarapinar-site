@@ -26,9 +26,9 @@ export default function APropos() {
     <section className="border-y border-sable bg-white/60"><div className="mx-auto max-w-6xl px-5 py-12"><Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "personnes coachées"], ["500+", "personnes formées"]]}/></div></section>
     <section className="mx-auto max-w-6xl px-5 py-20"><Reveal><h2 className="h2">Ce que les lecteurs m'ont répondu.</h2></Reveal>
       <div className="mt-8 columns-1 gap-5 md:columns-3">
-        <Quote q="Depuis que je t'ai découvert (hier), j'ai créé 6 projets ! […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
-        <Quote q="Je suis choqué par la quantité de valeur que tu viens de délivrer. Merci. Je m'abonne." n="Nirmoo" src="Claude Cowork, le guide complet"/>
-        <Quote q="Banger, très pédagogique & divertissant. J'enregistre précieusement ce guide ! Merci Onur :)" n="Pierre Cartier" src="Nano Banana 2" img={`${H}/t-pierre.jpg`}/>
+        <Quote q="Depuis que je t'ai découvert (hier), **j'ai créé 6 projets !** […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
+        <Quote q="Je suis choqué par la **quantité de valeur** que tu viens de délivrer. Merci. Je m'abonne." n="Nirmoo" src="Claude Cowork, le guide complet"/>
+        <Quote q="Banger, **très pédagogique & divertissant**. J'enregistre précieusement ce guide ! Merci Onur :)" n="Pierre Cartier" src="Nano Banana 2" img={`${H}/t-pierre.jpg`}/>
       </div>
       <Reveal className="mt-10 rounded-2xl bg-pale/50 p-8"><h3 className="text-xl font-bold">Une dernière chose</h3><p className="mt-2">Pose-moi ta question bête. Réponds à n'importe quelle édition, je lis tout. Les meilleures questions deviennent des éditions.</p></Reveal>
     </section>

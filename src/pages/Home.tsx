@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"; import { Link } from "react-router-dom";
-import { Scribble, Arrow, A, SUB, AMAZON, PDF, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
+import { Scribble, Arrow, A, SUB, AMAZON, PDF, amzRel, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
 import { guides, GuideCard, fdate, img } from "../guides";
 import { tools, DISCLOSURE } from "../data/tools";
 import { ToolCard } from "./Outils";
@@ -83,12 +83,12 @@ export default function Home() {
     <section className="bg-pale"><div className="mx-auto max-w-6xl px-5 py-24">
       <Reveal><div className="kicker">Ce qu'en disent les lecteurs</div><h2 className="h2 mt-3">Recopié tel quel, fautes comprises.</h2></Reveal>
       <div className="mt-10 columns-1 gap-5 md:columns-2 lg:columns-3">
-        <Quote q="Depuis que je t'ai découvert (hier), j'ai créé 6 projets ! […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
-        <Quote q="Je viens d'actualiser mon profil Linkedin avec Claude et tes prompts. Cela m'a demandé 1h30, mais cela vaut la peine." n="Marc Poskin" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-poskin.jpg`}/>
-        <Quote q="Je suis choqué par la quantité de valeur que tu viens de délivrer. Merci. Je m'abonne." n="Nirmoo" src="Claude Cowork, le guide complet"/>
-        <Quote q="Banger, très pédagogique & divertissant. J'enregistre précieusement ce guide ! Merci Onur :)" n="Pierre Cartier" src="Nano Banana 2" img={`${H}/t-pierre.jpg`}/>
-        <Quote q="Excellentissime, merci beaucoup à toi ! Tes partages sont inégalables et toujours généreux !" n="Laurent Berthelier" src="Le fichier contexte Claude" img={`${H}/t-laurent.jpg`}/>
-        <Quote q="Même si je n'utilise pas LinkedIn comme toi. Je prends ! Tu as gagné un abonné ! Un super article !" n="Yoann" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-yoann.jpg`}/>
+        <Quote q="Depuis que je t'ai découvert (hier), **j'ai créé 6 projets !** […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
+        <Quote q="Je viens d'actualiser mon profil Linkedin avec Claude et tes prompts. Cela m'a demandé 1h30, mais **cela vaut la peine**." n="Marc Poskin" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-poskin.jpg`}/>
+        <Quote q="Je suis choqué par la **quantité de valeur** que tu viens de délivrer. Merci. Je m'abonne." n="Nirmoo" src="Claude Cowork, le guide complet"/>
+        <Quote q="Banger, **très pédagogique & divertissant**. J'enregistre précieusement ce guide ! Merci Onur :)" n="Pierre Cartier" src="Nano Banana 2" img={`${H}/t-pierre.jpg`}/>
+        <Quote q="Excellentissime, merci beaucoup à toi ! **Tes partages sont inégalables** et toujours généreux !" n="Laurent Berthelier" src="Le fichier contexte Claude" img={`${H}/t-laurent.jpg`}/>
+        <Quote q="Même si je n'utilise pas LinkedIn comme toi. Je prends ! **Tu as gagné un abonné !** Un super article !" n="Yoann" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-yoann.jpg`}/>
       </div>
       <div className="mt-6 text-center"><a href={SUB} className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Moi aussi, je veux le prochain guide →</a></div>
     </div></section>
@@ -104,8 +104,8 @@ export default function Home() {
       <Reveal><Link to="/livre"><img src={`${A}/livre-couverture.jpg`} alt="Couverture du livre Petites Habitudes, Grandes Réussites" loading="lazy" className="mx-auto w-48 -rotate-3 rounded shadow-2xl transition hover:rotate-0 md:w-60"/></Link></Reveal>
       <Reveal delay={100}><div className="kicker">Le livre</div><h2 className="h2 mt-3">Avant l'IA, j'ai écrit un livre sur les habitudes.</h2>
         <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 15 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
-        <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link><a href={PDF} className="btn-ghost">Lire les 27 premières pages</a></div>
-        <a href={AMAZON} className="mt-3 inline-flex min-h-[44px] items-center text-sm text-ink/60 underline">Voir sur Amazon</a></Reveal>
+        <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link>{PDF && <a href={PDF} className="btn-ghost">Lire les 27 premières pages</a>}</div>
+        <a href={AMAZON} rel={amzRel} className="mt-3 inline-flex min-h-[44px] items-center text-sm text-ink/60 underline">Voir sur Amazon</a></Reveal>
     </div></section>
     <CtaBand title="Le prochain guide part bientôt. Il t'attend ?" text="Gratuit, une à deux fois par semaine. Promis, pas de spam, je n'ai pas le temps non plus."/>
   </>);

@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
 export const A = "/img";
 export const SUB = "https://onurkarapinar.substack.com/subscribe";
-export const AMAZON = "https://www.amazon.fr/dp/2212572018";
-export const PDF = "https://www.onurkarapinar.com/s/Petites_Habitudes_Grandes_Reussites___Extrait.pdf";
+export const AMAZON_TAG = "medium-ok-21";
+export const amz = (asin: string) => `https://www.amazon.fr/dp/${asin}` + (AMAZON_TAG ? `?tag=${AMAZON_TAG}` : "");
+export const amzRel = AMAZON_TAG ? "sponsored noopener" : "noopener";
+export const AMAZON = amz("2212572018");
+export const KINDLE = amz("B07PFLM9HD");
+// Extrait PDF : déposer le fichier dans public/ puis renseigner le chemin, ex. "/extrait-petites-habitudes.pdf"
+export const PDF = "";
 export function useSeo(title: string, desc: string) {
   useEffect(() => {
     document.title = title;
@@ -32,9 +37,10 @@ export function Copy({ text, label = "Copier le prompt" }: { text: string; label
   const [ok, setOk] = useState(false);
   return <button type="button" className="btn" onClick={async () => { try { await navigator.clipboard.writeText(text); } catch { const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); } setOk(true); setTimeout(() => setOk(false), 2000); }}>{ok ? "Copié !" : label}</button>;
 }
+export const Hl = ({ t }: { t: string }) => <>{t.split(/(\*\*[^*]+\*\*)/).map((p, i) => p.startsWith("**") ? <span key={i} className="underline decoration-terral decoration-[3px] underline-offset-4 [text-decoration-skip-ink:none]">{p.slice(2, -2)}</span> : p)}</>;
 export const Quote = ({ q, n, src, img }: { q: string; n: string; src: string; img?: string }) => (
   <figure className="card mb-5 break-inside-avoid p-7 hover:-rotate-[.6deg]">
-    <blockquote className="text-[15px] leading-relaxed">« {q} »</blockquote>
+    <blockquote className="text-[15px] leading-relaxed">« <Hl t={q}/> »</blockquote>
     <figcaption className="mt-4 flex items-center gap-3 text-sm">
       {img ? <img src={img} alt={`Photo de ${n}`} loading="lazy" width="40" height="40" className="h-10 w-10 rounded-full object-cover"/> : <span className="grid h-10 w-10 place-items-center rounded-full bg-pale font-bold">{n[0]}</span>}
       <span><b>{n}</b><br/><span className="text-ink/60">a commenté {src}</span></span>
