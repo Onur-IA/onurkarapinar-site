@@ -1,5 +1,5 @@
 import { useState } from "react"; import { Link } from "react-router-dom";
-import { A, SUB, AMAZON, PDF, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
+import { Scribble, Arrow, A, SUB, AMAZON, PDF, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
 import { guides, GuideCard } from "../guides";
 const prompts = [
   { t: "Ce que l'IA peut faire à ma place", s: "Trois tâches de ta semaine, déléguées.", p: "Pose-moi 5 questions sur mon travail, une par une. Ensuite, liste les 3 tâches de ma semaine que tu pourrais faire à ma place, avec le prompt exact pour chacune." },
@@ -14,7 +14,7 @@ export default function Home() {
   return (<>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-12 md:grid-cols-[1.15fr_.85fr] md:pt-20">
       <Reveal><div className="kicker">Salut, moi c'est Onur</div>
-        <h1 className="mt-4 text-[2.6rem] font-extrabold leading-[1.05] tracking-tight md:text-6xl">L'IA, <span className="text-terra">vraiment simple.</span></h1>
+        <h1 className="mt-4 text-[2.6rem] font-extrabold leading-[1.05] tracking-tight md:text-6xl">L'IA, <Scribble>vraiment simple.</Scribble></h1>
         <p className="mt-5 max-w-xl text-lg text-ink/80">Un guide de 10 minutes que tu vas adorer tester. Une à deux fois par semaine, pas à pas, avec captures et prompts à copier. Sans rien y connaître.</p>
         <div className="mt-7"><SubscribeForm/></div>
         <p className="mt-3 text-sm text-ink/60">Gratuit. Déjà <b>13 000 lecteurs</b>. Tu pars quand tu veux, en un clic.</p>
@@ -27,7 +27,7 @@ export default function Home() {
       <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6"><span className="kicker !text-ink/50">Vu dans</span>{logos.map(l => <img key={l} src={`${H}/logos-${l}.png`} alt={l} loading="lazy" className="h-6 opacity-60 grayscale md:h-7"/>)}</div>
     </div></section>
     <section id="essaie" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
-      <Reveal><div className="kicker">Essaie, là, tout de suite</div><h2 className="h2 mt-3">Choisis un prompt. Regarde ce qui se passe.</h2>
+      <Reveal><div className="kicker">Essaie, là, tout de suite</div><h2 className="h2 mt-3">Choisis un prompt. <Scribble>Regarde</Scribble> ce qui se passe. <Arrow/></h2>
         <p className="mt-3 max-w-2xl text-ink/70">Copie-le, colle-le dans ChatGPT ou Claude. Si ça te fait sourire, imagine un guide entier.</p></Reveal>
       <Reveal className="mt-8 grid gap-5 md:grid-cols-[.8fr_1.2fr]">
         <div role="tablist" className="flex gap-3 overflow-x-auto pb-2 md:flex-col md:overflow-visible">
@@ -62,7 +62,7 @@ export default function Home() {
         <Quote q="Excellentissime, merci beaucoup à toi ! Tes partages sont inégalables et toujours généreux !" n="Laurent Berthelier" src="Le fichier contexte Claude" img={`${H}/t-laurent.jpg`}/>
         <Quote q="Même si je n'utilise pas LinkedIn comme toi. Je prends ! Tu as gagné un abonné ! Un super article !" n="Yoann" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-yoann.jpg`}/>
       </div>
-      <div className="mt-6 text-center"><a href={SUB} className="btn">Moi aussi, je veux le prochain guide</a></div>
+      <div className="mt-6 text-center"><a href={SUB} className="font-bold text-terra underline underline-offset-4">Moi aussi, je veux le prochain guide →</a></div>
     </div></section>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:grid-cols-[.8fr_1.2fr]">
       <Reveal><img src={`${A}/portrait-collage.png`} alt="" loading="lazy" className="mx-auto w-full max-w-xs"/></Reveal>

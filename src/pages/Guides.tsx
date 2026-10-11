@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useSeo, Reveal, CtaBand } from "../lib";
+import { Scribble, useSeo, Reveal, CtaBand } from "../lib";
 import { guides, cat, GuideCard } from "../guides";
 const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 export default function Guides() {
@@ -9,7 +9,7 @@ export default function Guides() {
   const list = useMemo(() => guides.filter(g => (c === "Tous" || cat(g) === c) && norm(g.title + " " + g.subtitle).includes(norm(q))), [q, c]);
   return (<>
     <section className="mx-auto max-w-6xl px-5 pb-8 pt-14 md:pt-20"><Reveal><div className="kicker">Guides gratuits</div>
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">L'IA que tu peux vraiment utiliser.</h1>
+      <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">L'IA que tu peux <Scribble>vraiment</Scribble> utiliser.</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/80">{guides.length} guides publiés, chacun applicable en 10 minutes. Cherche un outil, un usage, ou pioche au hasard.</p></Reveal>
       <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
         <input value={q} onChange={e => setQ(e.target.value)} type="search" placeholder="Chercher : Claude, LinkedIn, images..." aria-label="Chercher un guide" className="w-full rounded-full border-2 border-sable bg-white px-5 py-3 outline-none focus:border-terra md:max-w-sm"/>
