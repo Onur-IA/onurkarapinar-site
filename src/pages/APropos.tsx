@@ -6,7 +6,7 @@ export default function APropos() {
   useSeo("À propos | Onur Karapinar", "Je teste l'IA tous les jours et je te l'explique comme à un ami qui n'a jamais ouvert ChatGPT. Head of Content chez France IA, 13 000 lecteurs.");
   return (<>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.2fr_.8fr] md:py-20">
-      <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">Deviens bon en IA en 10 minutes par semaine.</h1>
+      <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">Deviens bon en IA, 10 minutes par guide.</h1>
         <p className="mt-5 text-lg text-ink/80">Une à deux fois par semaine, je t'envoie une chose à faire avec l'IA le jour même. Un réglage, un prompt, un workflow. Expliqué comme à un ami qui n'a jamais ouvert ChatGPT.</p>
         <div className="mt-7"><SubscribeForm/></div><p className="mt-3 text-sm text-ink/60">Gratuit. Rejoins 13 000 lecteurs. Désinscription en un clic.</p></Reveal>
       <Reveal delay={150}><img src={`${A}/portrait-collage-720.webp`} alt="Onur Karapinar" className="mx-auto w-full max-w-sm"/></Reveal>
@@ -19,7 +19,7 @@ export default function APropos() {
     <section className="bg-white/60"><div className="mx-auto max-w-6xl px-5 py-20"><Reveal><h2 className="h2">Commence par ces trois éditions.</h2></Reveal>
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{start.map(s => guides.find(g => g.slug === s)).filter(Boolean).map((g, i) => <Reveal key={i} delay={i * 100}><GuideCard g={g!}/></Reveal>)}</div></div></section>
     <section className="mx-auto max-w-3xl px-5 py-20"><Reveal><div className="kicker">Pourquoi moi</div><h2 className="h2 mt-3">En 2023, personne n'expliquait l'IA simplement en français. Alors je m'y suis collé.</h2>
-      <div className="mt-6 space-y-4 text-ink/85"><p>Février 2023. Je publie mes premiers posts sur ChatGPT en français. Mon infographie pour débutants fait 600 000 impressions. Et ma messagerie explose : « C'est quoi un bon prompt ? », « Par où je commence ? ».</p>
+      <div className="mt-6 space-y-4 text-ink/85"><p>Février 2023. Je publie mes premiers posts sur ChatGPT en français. Et ma messagerie explose : « C'est quoi un bon prompt ? », « Par où je commence ? ».</p>
         <p>Je ne suis pas ingénieur. Je suis le gars qui teste tout, à voix haute, au point de s'isoler dans l'open space pour ne pas déranger l'étage. Le jour, je suis Head of Content chez France IA : je vois passer les nouveautés, et celles qui ne tiennent pas au premier vrai test.</p>
         <p>Ma méthode tient en une ligne : je regarde ce qui marche déjà, je le teste sur mon écran, et je te le rends en français, avec des exemples d'ici.</p>
         <p>Je suis aussi l'auteur de « Petites Habitudes, Grandes Réussites » (Eyrolles, 2019). Le livre parlait déjà de ça : changer un petit geste, le refaire, et voir la différence au bout de quelques semaines. Avec l'IA, c'est pareil.</p></div></Reveal></section>

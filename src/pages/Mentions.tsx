@@ -8,6 +8,6 @@ export default function Mentions() {
     <h2>Hébergement</h2><p>Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, États-Unis (Cloudflare Pages).</p>
     <h2>Newsletter</h2><p>L'inscription passe par Substack, Inc. Ton adresse e-mail sert uniquement à t'envoyer la newsletter. Tu peux te désabonner à tout moment depuis le lien présent dans chaque e-mail.</p>
     <h2>Propriété intellectuelle</h2><p>Les textes, images et guides de ce site appartiennent à Onur Karapinar, sauf mention contraire. Les marques et logos cités appartiennent à leurs propriétaires.</p>
-    <h2>Liens externes</h2><p>Les liens vers des outils tiers sont fournis à titre indicatif. S'il s'agit un jour de liens affiliés, ce sera indiqué sur la page concernée.</p>
+    <h2>Liens affiliés</h2><p>Certains liens de la page Outils sont affiliés et signalés comme tels : si tu t'abonnes via ces liens, je peux toucher une commission, sans surcoût pour toi. Je ne recommande que des outils que j'utilise.</p>
   </section>;
 }

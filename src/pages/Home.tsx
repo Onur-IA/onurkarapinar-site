@@ -29,7 +29,7 @@ export default function Home() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20">
         <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
           <h1 className="mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]">L'IA, <Scribble>vraiment simple.</Scribble></h1>
-          <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ta semaine avec l'IA.</p>
+          <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ton quotidien avec l'IA.</p>
           <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et le prompt à copier.</p>
           <div className="mt-6"><SubscribeForm/></div>
           <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex shrink-0 -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b>, 30 000 sur LinkedIn, auteur chez Eyrolles.</span></div>
