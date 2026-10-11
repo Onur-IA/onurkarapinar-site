@@ -2,7 +2,7 @@ export type Tool = { n: string; d: string; u: string; c: string; guide?: string;
 const S = "https://onurkarapinar.substack.com/p/";
 export const CATS = ["IA", "Écrire et dicter", "Créer", "Organiser", "Publier et construire"];
 export const all: Tool[] = [
-  { n: "Wispr Flow", c: "Écrire et dicter", d: "Mon outil principal. Je parle au lieu de taper, partout sur mon ordinateur.", u: "https://wisprflow.ai/r?ONUR80", aff: true },
+  { n: "Wispr Flow", c: "Écrire et dicter", d: "Mon outil principal. Je parle au lieu de taper, partout sur mon ordinateur.", u: "https://ref.wisprflow.ai/onur-karapinar-qzbo", aff: true },
   { n: "Claude", c: "IA", d: "L'assistant IA au cœur de la plupart de mes guides : contexte, Projects, Skills, Cowork.", u: "https://claude.ai/", guide: S + "claude-guide-debutant" },
   { n: "Grok", c: "IA", d: "L'assistant IA de xAI, pour chercher et créer au quotidien.", u: "https://grok.com/" },
   { n: "ChatGPT", c: "IA", d: "L'assistant le plus connu, pour tester les prompts du site en un clic.", u: "https://chatgpt.com/" },
