@@ -18,18 +18,13 @@ const outcomes = [
 const logos = ["Challenge", "FrenchWeb", "Hubspot", "WTTJ", "Livementor", "Eyrolles"];
 const H = "/img";
 const LOGO_H: Record<string, number> = {"Challenge": 30.4, "Eyrolles": 30.1, "FrenchWeb": 26.8, "Hubspot": 32.1, "Livementor": 20.5, "WTTJ": 34.0};
-export default function Home() {
-  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
-  const [tab, setTab] = useState(0);
-  const full = prompts[0].p; const [n, setN] = useState(0);
-  useEffect(() => { if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setN(full.length); return; } const t = setInterval(() => setN(x => x >= full.length + 40 ? 0 : x + 1), 38); return () => clearInterval(t); }, []);
-  const typed = full.slice(0, Math.min(n, full.length));
-  return (<>
+export function HeroSection({ typed, title, h1 }: { typed: string; title?: React.ReactNode; h1?: string }) {
+  return (
     <section className="relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-pale/60 blur-3xl"/>
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20">
         <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
-          <h1 className="mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]">L'IA, <Scribble>vraiment simple.</Scribble></h1>
+          <h1 className={h1 ?? "mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]"}>{title ?? <>L'IA, <Scribble>vraiment simple.</Scribble></>}</h1>
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ton quotidien avec l'IA.</p>
           <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et la méthode détaillée.</p>
           <div className="mt-6"><SubscribeForm/></div>
@@ -47,6 +42,16 @@ export default function Home() {
         </Reveal>
       </div>
     </section>
+  );
+}
+export default function Home() {
+  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
+  const [tab, setTab] = useState(0);
+  const full = prompts[0].p; const [n, setN] = useState(0);
+  useEffect(() => { if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setN(full.length); return; } const t = setInterval(() => setN(x => x >= full.length + 40 ? 0 : x + 1), 38); return () => clearInterval(t); }, []);
+  const typed = full.slice(0, Math.min(n, full.length));
+  return (<>
+    <HeroSection typed={typed}/>
     <section className="border-y border-sable bg-white"><div className="mx-auto max-w-6xl px-5 py-12">
       <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
       <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/70">On a parlé de moi dans</div>
