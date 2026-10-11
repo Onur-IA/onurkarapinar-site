@@ -10,7 +10,7 @@ export default function Guides() {
   return (<>
     <section className="mx-auto max-w-6xl px-5 pb-8 pt-14 md:pt-20"><Reveal><div className="kicker">Guides gratuits</div>
       <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">L'IA que tu peux <Scribble>vraiment</Scribble> utiliser.</h1>
-      <p className="mt-4 max-w-2xl text-lg text-ink/80">{guides.length} guides publiés, chacun applicable en 10 minutes. Cherche un outil, un usage, ou pioche au hasard.</p></Reveal>
+      <p className="mt-4 max-w-2xl text-lg text-ink/80">{guides.length} guides publiés, chacun applicable en 10 minutes. Tape le nom d'un outil ou d'un problème, ou pioche au hasard.</p></Reveal>
       <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
         <input value={q} onChange={e => setQ(e.target.value)} type="search" placeholder="Chercher : Claude, LinkedIn, images..." aria-label="Chercher un guide" className="w-full rounded-full border-2 border-sable bg-white px-5 py-3 outline-none focus:border-terra md:max-w-sm"/>
         <div className="flex flex-wrap gap-2">{cats.map(x => <button key={x} onClick={() => setC(x)} className={"rounded-full border-2 px-4 py-1.5 text-sm font-bold transition " + (c === x ? "border-ink bg-ink text-creme" : "border-sable hover:border-ink/40")}>{x}</button>)}</div>

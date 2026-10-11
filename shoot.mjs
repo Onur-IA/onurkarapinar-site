@@ -12,7 +12,7 @@ for (const [dev, vp] of [["ordinateur", { width: 1440, height: 900 }], ["mobile"
     const bad = await p.evaluate(() => [...document.images].filter(i => !i.complete || i.naturalWidth === 0).map(i => i.src));
     const ow = await p.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
     console.log(dev, n, await p.title(), "| imgs KO:", bad.length, bad.slice(0, 2), "| overflow:", ow);
-    if (!["merci", "404"].includes(n) || dev === "mobile") await p.screenshot({ path: `captures/${n}-${dev}.png`, fullPage: true });
+    if (!["merci", "404"].includes(n) || dev === "mobile") await p.screenshot({ path: `captures/v2-${n}-${dev}.png`, fullPage: true });
   }
   await p.goto(B + "/", { waitUntil: "networkidle" }); await p.click("text=Mon mail le plus pénible"); await p.click("button:has-text('Copier le prompt')");
   console.log(dev, "copie:", (await p.evaluate(() => navigator.clipboard.readText())).slice(0, 40), "| btn:", await p.textContent("button:has-text('Copié')"));

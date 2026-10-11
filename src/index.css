@@ -3,12 +3,20 @@ html{scroll-behavior:smooth} body{-webkit-font-smoothing:antialiased}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-.btn{@apply inline-flex items-center justify-center rounded-full bg-terra px-6 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-lg}
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-full bg-terra px-7 py-3.5 font-bold text-white shadow-[0_6px_0_#8f3c28] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_0_#8f3c28] active:translate-y-1 active:shadow-[0_2px_0_#8f3c28]}
 .btn-ghost{@apply inline-flex items-center justify-center rounded-full border-2 border-ink px-6 py-3 font-bold transition hover:bg-ink hover:text-creme}
 .kicker{@apply text-xs font-bold uppercase tracking-[.18em] text-terra}
-.h2{@apply text-3xl font-extrabold tracking-tight md:text-4xl}
-.card{@apply rounded-2xl border border-sable bg-white transition hover:-translate-y-1 hover:shadow-xl}
-h1,.h2{font-family:Fraunces,Georgia,serif;font-weight:800;letter-spacing:-.01em}
+
+.card{@apply rounded-3xl border border-sable bg-white transition hover:-translate-y-1 hover:shadow-xl}
+h1,h2,h3,.h2{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+body{font-size:17px;line-height:1.65} p{text-wrap:pretty}
+@media(min-width:768px){body{font-size:18px}}
+.h2{@apply text-[2rem] leading-[1.12] md:text-5xl}
+.caret::after{content:"";display:inline-block;width:.55em;height:1.1em;margin-left:2px;vertical-align:-.15em;background:#D96A4E;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-10px) rotate(var(--r,0deg))}}
+.floaty{animation:floaty 6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.floaty,.caret::after,.scribble path{animation:none!important;stroke-dashoffset:0}}
 .scribble{position:relative;white-space:nowrap}
 .scribble svg{position:absolute;left:-2%;bottom:-.18em;width:104%;height:.4em;overflow:visible}
 .scribble path{stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.1s .4s ease forwards}

@@ -10,8 +10,8 @@ export default function Livre() {
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[.7fr_1.3fr] md:py-20">
       <Reveal><img src={`${A}/livre-couverture.jpg`} alt="Couverture de Petites Habitudes, Grandes Réussites" className="mx-auto w-56 -rotate-2 rounded shadow-2xl md:w-72"/></Reveal>
       <Reveal delay={100}><div className="text-terra">★★★★★ <span className="text-sm text-ink/70">4,5 sur 5, 364 notes Amazon</span></div>
-        <h1 className="mt-3 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">Tu sais ce qu'il faudrait changer. Ce livre t'aide à enfin le faire.</h1>
-        <p className="mt-4 text-lg text-ink/80">51 pratiques concrètes, chacune découpée en gestes <b>assez petits pour commencer ce soir</b>. Pas de bain glacé obligatoire, pas de lever à 5 h : une méthode.</p>
+        <h1 className="mt-3 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">Tu sais ce qu'il faudrait changer. Ce livre t'aide à le faire, enfin.</h1>
+        <p className="mt-4 text-lg text-ink/80">51 pratiques concrètes, chacune découpée en gestes <b>assez petits pour commencer ce soir</b>. Une méthode testée sur moi pendant trois ans, et aucun bain glacé obligatoire.</p>
         <div className="mt-7 flex flex-wrap gap-3"><a href={AMAZON} className="btn">Commander sur Amazon</a><a href={PDF} className="btn-ghost">Lire les 27 premières pages</a></div>
         <p className="mt-3 text-sm text-ink/60">Eyrolles, 2019. 310 pages. Préface de Benoît Wojtenka.</p></Reveal>
     </section>

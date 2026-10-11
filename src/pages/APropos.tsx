@@ -18,10 +18,10 @@ export default function APropos() {
     </section>
     <section className="bg-white/60"><div className="mx-auto max-w-6xl px-5 py-20"><Reveal><h2 className="h2">Commence par ces trois éditions.</h2></Reveal>
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{start.map(s => guides.find(g => g.slug === s)).filter(Boolean).map((g, i) => <Reveal key={i} delay={i * 100}><GuideCard g={g!}/></Reveal>)}</div></div></section>
-    <section className="mx-auto max-w-3xl px-5 py-20"><Reveal><div className="kicker">Pourquoi moi</div><h2 className="h2 mt-3">Personne n'expliquait l'IA simplement en français. Alors je m'y suis collé.</h2>
+    <section className="mx-auto max-w-3xl px-5 py-20"><Reveal><div className="kicker">Pourquoi moi</div><h2 className="h2 mt-3">En 2023, personne n'expliquait l'IA simplement en français. Alors je m'y suis collé.</h2>
       <div className="mt-6 space-y-4 text-ink/85"><p>Février 2023. Je publie mes premiers posts sur ChatGPT en français. Mon infographie pour débutants fait 600 000 impressions. Et ma messagerie explose : « C'est quoi un bon prompt ? », « Par où je commence ? ».</p>
         <p>Je ne suis pas ingénieur. Je suis le gars qui teste tout, à voix haute, au point de s'isoler dans l'open space pour ne pas déranger l'étage. Le jour, je suis Head of Content chez France IA : je vois passer les nouveautés, et celles qui ne tiennent pas au premier vrai test.</p>
-        <p>Ma méthode est simple. Je regarde ce qui marche déjà, je le teste sur mon écran, et je te le rends en français, avec des exemples d'ici.</p>
+        <p>Ma méthode tient en une ligne : je regarde ce qui marche déjà, je le teste sur mon écran, et je te le rends en français, avec des exemples d'ici.</p>
         <p>Je suis aussi l'auteur de « Petites Habitudes, Grandes Réussites » (Eyrolles, 2019). Le livre parlait déjà de ça : changer un petit geste, le refaire, et voir la différence au bout de quelques semaines. Avec l'IA, c'est pareil.</p></div></Reveal></section>
     <section className="border-y border-sable bg-white/60"><div className="mx-auto max-w-6xl px-5 py-12"><Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "personnes coachées"], ["500+", "personnes formées"]]}/></div></section>
     <section className="mx-auto max-w-6xl px-5 py-20"><Reveal><h2 className="h2">Ce que les lecteurs m'ont répondu.</h2></Reveal>
