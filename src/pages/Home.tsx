@@ -6,8 +6,15 @@ const prompts = [
   { t: "Mon mail le plus pénible", s: "Celui que tu repousses depuis trois jours.", p: "Je dois écrire un mail que je repousse depuis des jours. Pose-moi d'abord 3 questions : à qui, pourquoi, et ce que je crains. Puis rédige 2 versions courtes, une directe et une plus diplomate, et dis-moi laquelle tu enverrais à ma place." },
   { t: "Mon prof particulier", s: "Comprendre n'importe quoi en 5 minutes.", p: "Explique-moi [un sujet qui me bloque] comme si j'avais 12 ans, avec un exemple de la vie quotidienne. Ensuite, pose-moi 3 questions pour vérifier que j'ai compris, une par une, et corrige-moi gentiment." },
 ];
+const S = "https://onurkarapinar.substack.com/p/";
+const outcomes = [
+  { t: "Configurer Claude pour qu'il te connaisse", d: "Un fichier contexte, et il arrête de te répondre comme à un inconnu.", u: S + "fichier-contexte-claude" },
+  { t: "Ne plus jamais retaper tes prompts", d: "Tes demandes récurrentes deviennent des commandes en un clic.", u: S + "claude-skills" },
+  { t: "Créer tes visuels sans graphiste", d: "Des images propres pour tes posts et présentations, en quelques minutes.", u: S + "nano-banana-2-le-guide-pour-bien" },
+  { t: "Refaire ton profil LinkedIn", d: "Titre, résumé, expériences : réécrits avec l'IA, en gardant ta voix.", u: S + "jai-refait-tout-mon-profil-linkedin" },
+];
 const logos = ["Challenge", "FrenchWeb", "Hubspot", "WTTJ", "Livementor", "Eyrolles"];
-const H = "https://cdn.jsdelivr.net/gh/Onur-IA/ak-site-assets@81f2440/home";
+const H = "/img";
 export default function Home() {
   useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et prompts à copier. Gratuit, déjà 13 000 lecteurs.");
   const [tab, setTab] = useState(0);
@@ -21,15 +28,17 @@ export default function Home() {
         <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
           <h1 className="mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]">L'IA, <Scribble>vraiment simple.</Scribble></h1>
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Un guide de 10 minutes, une à deux fois par semaine. Tu suis les captures, tu copies le prompt, et c'est réglé.</p>
-          <div className="mt-8"><SubscribeForm/></div>
-          <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b> l'ouvrent déjà.</span></div>
+          <a href="/livre" className="mt-7 flex min-h-[44px] items-center gap-3 rounded-2xl border border-sable bg-white p-3 pr-4 transition hover:border-terra"><img src={`${A}/avatar.webp`} alt="Onur Karapinar" width="48" height="48" className="h-12 w-12 shrink-0 rounded-full object-cover md:hidden"/><img src={`${A}/livre-couverture.jpg`} alt="" width="36" height="52" className="hidden h-[52px] w-9 shrink-0 rounded-sm object-cover shadow md:block"/><span className="text-sm leading-snug">Auteur du best-seller <b className="text-ink">Petites habitudes, grandes réussites</b>, 15 000 exemplaires</span></a>
+          <p className="mt-3 text-sm text-ink/70">Chaque guide : 10 minutes, des captures à chaque étape et le prompt à copier.</p>
+          <div className="mt-6"><SubscribeForm/></div>
+          <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b> l'ouvrent déjà.</span></div>
         </Reveal>
         <Reveal delay={150} className="relative mx-auto w-full max-w-md">
           <div className="absolute inset-x-6 bottom-0 top-10 -rotate-3 rounded-[2.5rem] bg-terral"/>
-          <img src={`${A}/portrait-collage.png`} alt="Onur Karapinar" className="relative mx-auto w-[88%] drop-shadow-xl"/>
-          <div className="floaty absolute -left-4 bottom-8 w-[78%] rounded-2xl border border-sable bg-white p-4 shadow-2xl md:-left-12" style={{ ["--r" as any]: "-2deg" }}>
+          <img src={`${A}/portrait-collage-720.webp`} srcSet={`${A}/portrait-collage-440.webp 440w, ${A}/portrait-collage-720.webp 720w`} sizes="(min-width:768px) 420px, 88vw" width="720" height="697" fetchPriority="high" alt="Portrait d'Onur Karapinar" className="relative mx-auto w-[88%] drop-shadow-xl"/>
+          <div className="floaty relative z-10 mx-auto -mt-6 w-[92%] rounded-2xl md:-mt-10 border border-sable bg-white p-4 shadow-2xl md:-left-12" style={{ ["--r" as any]: "-2deg" }}>
             <div className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-terral"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="h-2.5 w-2.5 rounded-full bg-sable"/><span className="ml-2 text-xs font-semibold text-ink/50">Ton prompt du jour</span></div>
-            <p className="caret mt-3 min-h-[4.5em] font-mono text-[13px] leading-snug">{typed}</p>
+            <p className="caret mt-3 min-h-[3em] font-mono text-[13px] leading-snug">{typed}</p>
           </div>
           <div className="floaty absolute -right-2 top-6 rounded-2xl bg-ink px-4 py-3 text-creme shadow-xl md:-right-6" style={{ ["--r" as any]: "4deg", animationDelay: "1.5s" }}><div className="font-display text-2xl font-extrabold">10 min</div><div className="text-xs text-creme/70">par guide, montre en main</div></div>
         </Reveal>
@@ -38,7 +47,12 @@ export default function Home() {
     <section className="border-y border-sable bg-white"><div className="mx-auto max-w-6xl px-5 py-12">
       <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
       <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/50">On a parlé de moi dans</div>
-      <div className="mt-4 grid grid-cols-3 items-center gap-x-4 gap-y-2 md:grid-cols-6">{logos.map(l => <img key={l} src={`${H}/logos-${l}.png`} alt={l} loading="lazy" className="mx-auto h-20 w-auto opacity-75 grayscale transition hover:opacity-100 hover:grayscale-0 md:h-24"/>)}</div>
+      <div className="mt-4 grid grid-cols-3 items-center gap-x-4 gap-y-2 md:grid-cols-6">{logos.map(l => <img key={l} src={`${H}/logos-${l}.png`} alt={`Logo ${l}`} loading="lazy" className="mx-auto h-20 w-auto transition hover:scale-105 md:h-24"/>)}</div>
+    </div></section>
+    <section className="bg-terral/10"><div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-6 text-center sm:flex-row sm:justify-center sm:text-left">
+      <img src={`${A}/livre-couverture.jpg`} alt="" width="40" height="58" loading="lazy" className="h-14 w-10 -rotate-3 rounded-sm object-cover shadow"/>
+      <p className="font-semibold"><span className="text-terra">Best-seller</span> · Petites habitudes, grandes réussites · 15 000+ exemplaires · 4,5/5 sur Amazon</p>
+      <Link to="/livre" className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Découvrir le livre</Link>
     </div></section>
     <section id="essaie" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24">
       <Reveal><div className="kicker">Essaie, là, tout de suite</div><h2 className="h2 mt-3">Choisis un prompt. <Scribble>Regarde</Scribble> ce qui se passe. <Arrow/></h2>
@@ -55,11 +69,10 @@ export default function Home() {
         </div>
       </Reveal>
     </section>
-    <section className="bg-ink text-creme"><div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-24 md:grid-cols-[.9fr_1.1fr]">
-      <Reveal><img src={`${H}/velo-debutant.jpg`} alt="Un vélo avec une petite roue stabilisatrice terracotta" loading="lazy" className="w-full rotate-[-2deg] rounded-3xl shadow-2xl transition duration-500 hover:rotate-0"/></Reveal>
-      <Reveal delay={100}><h2 className="h2">Jamais codé ? Parfait.</h2>
-        <p className="mt-5 max-w-[52ch] text-creme/80">Tu as déjà tapé une question dans ChatGPT, eu une réponse moyenne, refermé l'onglet. Personne ne t'avait montré les réglages. Chaque guide part d'un vrai problème de ta semaine et le règle avec toi, une capture par étape.</p>
-        <p className="mt-8 border-l-4 border-terral pl-5 text-xl font-bold leading-snug">Ma règle : si ta mère ne peut pas s'en servir, j'ai raté mon édition.</p></Reveal>
+    <section className="bg-white"><div className="mx-auto max-w-6xl px-5 py-24">
+      <Reveal><div className="kicker">Apprendre l'IA, concrètement</div><h2 className="h2 mt-3">Ce que tu sauras faire.</h2>
+        <p className="mt-3 max-w-2xl text-ink/70">Chaque compétence tient dans un guide. Tu le suis une fois, tu la gardes.</p></Reveal>
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{outcomes.map((o, i) => <Reveal key={o.u} delay={i * 80}><a href={o.u} className="card flex h-full flex-col p-6"><span className="font-display text-3xl font-extrabold text-terra">0{i + 1}</span><h3 className="mt-3 text-lg leading-snug">{o.t}</h3><p className="mt-2 text-[15px] text-ink/70">{o.d}</p><span className="mt-auto pt-4 text-sm font-bold text-terra">Le guide →</span></a></Reveal>)}</div>
     </div></section>
     <section className="mx-auto max-w-6xl px-5 py-24">
       <Reveal className="flex flex-wrap items-end justify-between gap-4"><div><div className="kicker">Commence ici</div><h2 className="h2 mt-3">Les trois derniers guides.</h2></div><Link to="/guides" className="btn-ghost">Tous les guides</Link></Reveal>
@@ -70,26 +83,26 @@ export default function Home() {
       <div className="mt-10 columns-1 gap-5 md:columns-2 lg:columns-3">
         <Quote q="Depuis que je t'ai découvert (hier), j'ai créé 6 projets ! […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
         <Quote q="Je viens d'actualiser mon profil Linkedin avec Claude et tes prompts. Cela m'a demandé 1h30, mais cela vaut la peine." n="Marc Poskin" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-poskin.jpg`}/>
-        <Quote q="Je suis choqué par la quantité de valeur que tu viens de délivrer. Merci. Je m'abonne." n="Nirmoo" src="Claude Cowork, le guide complet"/>
         <Quote q="Banger, très pédagogique & divertissant. J'enregistre précieusement ce guide ! Merci Onur :)" n="Pierre Cartier" src="Nano Banana 2" img={`${H}/t-pierre.jpg`}/>
         <Quote q="Excellentissime, merci beaucoup à toi ! Tes partages sont inégalables et toujours généreux !" n="Laurent Berthelier" src="Le fichier contexte Claude" img={`${H}/t-laurent.jpg`}/>
         <Quote q="Même si je n'utilise pas LinkedIn comme toi. Je prends ! Tu as gagné un abonné ! Un super article !" n="Yoann" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-yoann.jpg`}/>
       </div>
-      <div className="mt-6 text-center"><a href={SUB} className="font-bold text-terra underline underline-offset-4">Moi aussi, je veux le prochain guide →</a></div>
+      <div className="mt-6 text-center"><a href={SUB} className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Moi aussi, je veux le prochain guide →</a></div>
     </div></section>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-24 md:grid-cols-[.8fr_1.2fr]">
-      <Reveal><img src={`${A}/portrait-collage.png`} alt="" loading="lazy" className="mx-auto w-full max-w-xs"/></Reveal>
+      <Reveal><img src={`${A}/portrait-studio.webp`} alt="Onur Karapinar, sourire, sur fond bleu" width="640" height="640" loading="lazy" className="mx-auto w-full max-w-xs rotate-2 rounded-3xl object-cover shadow-xl"/></Reveal>
       <Reveal delay={100}><div className="kicker">Qui est derrière tout ça ?</div>
         <blockquote className="mt-4 text-2xl font-bold leading-snug">« Mon seul critère : quand tu refermes un guide, tu te sens plus intelligent qu'en l'ouvrant. »</blockquote>
         <p className="mt-4 text-ink/80">Je m'appelle Onur. J'écris sur Internet depuis 2016 et je teste l'IA tous les jours depuis fin 2022. Je suis Head of Content chez France IA : je construis des workflows IA le matin et je te les explique le soir, sans jargon. Je fais les erreurs avant toi, c'est un peu mon métier.</p>
-        <Link to="/a-propos" className="mt-6 inline-block font-bold text-terra">Lire mon histoire →</Link></Reveal>
+        <p className="mt-6 border-l-4 border-terral pl-5 text-lg font-bold leading-snug">Ma règle : si ta mère ne peut pas s'en servir, j'ai raté mon édition.</p>
+        <Link to="/a-propos" className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra">Lire mon histoire →</Link></Reveal>
     </section>
     <section className="bg-white/60"><div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-24 md:grid-cols-[.6fr_1.4fr]">
       <Reveal><Link to="/livre"><img src={`${A}/livre-couverture.jpg`} alt="Couverture du livre Petites Habitudes, Grandes Réussites" loading="lazy" className="mx-auto w-48 -rotate-3 rounded shadow-2xl transition hover:rotate-0 md:w-60"/></Link></Reveal>
       <Reveal delay={100}><div className="kicker">Le livre</div><h2 className="h2 mt-3">Avant l'IA, j'ai écrit un livre sur les habitudes.</h2>
         <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 15 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
         <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link><a href={PDF} className="btn-ghost">Lire les 27 premières pages</a></div>
-        <a href={AMAZON} className="mt-3 inline-block text-sm text-ink/60 underline">Voir sur Amazon</a></Reveal>
+        <a href={AMAZON} className="mt-3 inline-flex min-h-[44px] items-center text-sm text-ink/60 underline">Voir sur Amazon</a></Reveal>
     </div></section>
     <CtaBand title="Le prochain guide part bientôt. Il t'attend ?" text="Gratuit, une à deux fois par semaine. Promis, pas de spam, je n'ai pas le temps non plus."/>
   </>);

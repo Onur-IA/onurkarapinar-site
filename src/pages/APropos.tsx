@@ -1,6 +1,6 @@
 import { A, useSeo, Reveal, SubscribeForm, Quote, Stats, CtaBand } from "../lib";
 import { guides, GuideCard } from "../guides";
-const H = "https://cdn.jsdelivr.net/gh/Onur-IA/ak-site-assets@81f2440/home";
+const H = "/img";
 const start = ["claude-guide-debutant", "fichier-voix-claude", "claude-skills"];
 export default function APropos() {
   useSeo("À propos | Onur Karapinar", "Je teste l'IA tous les jours et je te l'explique comme à un ami qui n'a jamais ouvert ChatGPT. Head of Content chez France IA, 13 000 lecteurs.");
@@ -9,7 +9,7 @@ export default function APropos() {
       <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">Deviens bon en IA en 10 minutes par semaine.</h1>
         <p className="mt-5 text-lg text-ink/80">Une à deux fois par semaine, je t'envoie une chose à faire avec l'IA le jour même. Un réglage, un prompt, un workflow. Expliqué comme à un ami qui n'a jamais ouvert ChatGPT.</p>
         <div className="mt-7"><SubscribeForm/></div><p className="mt-3 text-sm text-ink/60">Gratuit. Rejoins 13 000 lecteurs. Désinscription en un clic.</p></Reveal>
-      <Reveal delay={150}><img src={`${A}/portrait-collage.png`} alt="Onur Karapinar" className="mx-auto w-full max-w-sm"/></Reveal>
+      <Reveal delay={150}><img src={`${A}/portrait-collage-720.webp`} alt="Onur Karapinar" className="mx-auto w-full max-w-sm"/></Reveal>
     </section>
     <section className="bg-ink text-creme"><Reveal className="mx-auto max-w-4xl px-5 py-14 text-center text-2xl font-bold leading-snug md:text-3xl">Ma règle : si ta mère ne peut pas s'en servir, <span className="text-terral">j'ai raté mon édition.</span></Reveal></section>
     <section className="mx-auto max-w-5xl px-5 py-20"><Reveal><div className="kicker">Ce que tu reçois</div><h2 className="h2 mt-3">Une édition, une action.</h2><p className="mt-3 text-ink/70">Tu lis, tu ouvres l'outil, tu refais.</p></Reveal>

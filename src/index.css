@@ -8,7 +8,7 @@ html{scroll-behavior:smooth} body{-webkit-font-smoothing:antialiased}
 .kicker{@apply text-xs font-bold uppercase tracking-[.18em] text-terra}
 
 .card{@apply rounded-3xl border border-sable bg-white transition hover:-translate-y-1 hover:shadow-xl}
-h1,h2,h3,.h2{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+h1,h2,h3,.h2{font-family:"Plus Jakarta Sans Variable","Plus Jakarta Sans",Inter,sans-serif;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
 body{font-size:17px;line-height:1.65} p{text-wrap:pretty}
 @media(min-width:768px){body{font-size:18px}}
 .h2{@apply text-[2rem] leading-[1.12] md:text-5xl}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
-export const A = "https://cdn.jsdelivr.net/gh/Onur-IA/ak-site-assets@283b470/home";
+export const A = "/img";
 export const SUB = "https://onurkarapinar.substack.com/subscribe";
 export const AMAZON = "https://www.amazon.fr/dp/2212572018";
 export const PDF = "https://www.onurkarapinar.com/s/Petites_Habitudes_Grandes_Reussites___Extrait.pdf";
@@ -35,7 +35,7 @@ export const Quote = ({ q, n, src, img }: { q: string; n: string; src: string; i
   <figure className="card mb-5 break-inside-avoid p-7 hover:-rotate-[.6deg]">
     <blockquote className="text-[15px] leading-relaxed">« {q} »</blockquote>
     <figcaption className="mt-4 flex items-center gap-3 text-sm">
-      {img ? <img src={img} alt={n} loading="lazy" className="h-10 w-10 rounded-full object-cover grayscale"/> : <span className="grid h-10 w-10 place-items-center rounded-full bg-pale font-bold">{n[0]}</span>}
+      {img ? <img src={img} alt={`Photo de ${n}`} loading="lazy" width="40" height="40" className="h-10 w-10 rounded-full object-cover"/> : <span className="grid h-10 w-10 place-items-center rounded-full bg-pale font-bold">{n[0]}</span>}
       <span><b>{n}</b><br/><span className="text-ink/60">a commenté {src}</span></span>
     </figcaption>
   </figure>
