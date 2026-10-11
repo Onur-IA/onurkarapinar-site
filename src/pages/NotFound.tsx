@@ -19,7 +19,7 @@ export default function NotFound() {
   const [q, setQ] = useState("");
   const res = q.trim().length > 1 ? all.map(it => ({ it, s: score(q, it) })).filter(x => x.s > 0.5).sort((a, b) => b.s - a.s).slice(0, 6).map(x => x.it) : [];
   return <section className="mx-auto max-w-2xl px-5 py-16 text-center md:py-20">
-    <img src="/img/404-errer.webp" width="960" height="484" alt="Un voyageur avec une boussole devant un panneau indicateur, sur un chemin qui serpente" fetchPriority="high" className="mx-auto h-auto w-full max-w-xl rounded-2xl"/>
+    <img src="/img/404-errer.webp" width="960" height="484" alt="Un voyageur à la croisée des chemins devant un panneau indicateur" fetchPriority="high" className="mx-auto h-auto w-full max-w-xl rounded-2xl"/>
     <div className="kicker mt-6">Erreur 404</div>
     <h1 className="mt-3 text-3xl font-extrabold md:text-4xl">Cette page s'est perdue en chemin.</h1>
     <blockquote className="mt-5 text-lg italic text-ink/80">« Tous ceux qui errent ne sont pas perdus. »<span className="mt-1 block text-sm not-italic text-ink/70">J.R.R. Tolkien</span></blockquote>
