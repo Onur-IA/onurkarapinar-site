@@ -27,9 +27,8 @@ export default function Home() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 md:grid-cols-[1.05fr_.95fr] md:pt-20">
         <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
           <h1 className="mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]">L'IA, <Scribble>vraiment simple.</Scribble></h1>
-          <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Un guide de 10 minutes, une à deux fois par semaine. Tu suis les captures, tu copies le prompt, et c'est réglé.</p>
-          <a href="/livre" className="mt-7 flex min-h-[44px] items-center gap-3 rounded-2xl border border-sable bg-white p-3 pr-4 transition hover:border-terra"><img src={`${A}/avatar.webp`} alt="Onur Karapinar" width="48" height="48" className="h-12 w-12 shrink-0 rounded-full object-cover md:hidden"/><img src={`${A}/livre-couverture.jpg`} alt="" width="36" height="52" className="hidden h-[52px] w-9 shrink-0 rounded-sm object-cover shadow md:block"/><span className="text-sm leading-snug">Auteur du best-seller <b className="text-ink">Petites habitudes, grandes réussites</b>, 15 000 exemplaires</span></a>
-          <p className="mt-3 text-sm text-ink/70">Chaque guide : 10 minutes, des captures à chaque étape et le prompt à copier.</p>
+          <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ta semaine avec l'IA.</p>
+          <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et le prompt à copier.</p>
           <div className="mt-6"><SubscribeForm/></div>
           <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b> l'ouvrent déjà.</span></div>
         </Reveal>
@@ -48,11 +47,6 @@ export default function Home() {
       <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["15 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "entrepreneurs formés"]]}/>
       <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/50">On a parlé de moi dans</div>
       <div className="mt-4 grid grid-cols-3 items-center gap-x-4 gap-y-2 md:grid-cols-6">{logos.map(l => <img key={l} src={`${H}/logos-${l}.png`} alt={`Logo ${l}`} loading="lazy" className="mx-auto h-20 w-auto transition hover:scale-105 md:h-24"/>)}</div>
-    </div></section>
-    <section className="bg-terral/10"><div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-6 text-center sm:flex-row sm:justify-center sm:text-left">
-      <img src={`${A}/livre-couverture.jpg`} alt="" width="40" height="58" loading="lazy" className="h-14 w-10 -rotate-3 rounded-sm object-cover shadow"/>
-      <p className="font-semibold"><span className="text-terra">Best-seller</span> · Petites habitudes, grandes réussites · 15 000+ exemplaires · 4,5/5 sur Amazon</p>
-      <Link to="/livre" className="inline-flex min-h-[44px] items-center font-bold text-terra underline underline-offset-4">Découvrir le livre</Link>
     </div></section>
     <section id="essaie" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24">
       <Reveal><div className="kicker">Essaie, là, tout de suite</div><h2 className="h2 mt-3">Choisis un prompt. <Scribble>Regarde</Scribble> ce qui se passe. <Arrow/></h2>
@@ -83,6 +77,7 @@ export default function Home() {
       <div className="mt-10 columns-1 gap-5 md:columns-2 lg:columns-3">
         <Quote q="Depuis que je t'ai découvert (hier), j'ai créé 6 projets ! […] C'est un peu enivrant ! Mais passionnant quand on commence à piger." n="Le Hamac" src="Le fichier contexte Claude" img={`${H}/t-hamac.jpg`}/>
         <Quote q="Je viens d'actualiser mon profil Linkedin avec Claude et tes prompts. Cela m'a demandé 1h30, mais cela vaut la peine." n="Marc Poskin" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-poskin.jpg`}/>
+        <Quote q="Je suis choqué par la quantité de valeur que tu viens de délivrer. Merci. Je m'abonne." n="Nirmoo" src="Claude Cowork, le guide complet"/>
         <Quote q="Banger, très pédagogique & divertissant. J'enregistre précieusement ce guide ! Merci Onur :)" n="Pierre Cartier" src="Nano Banana 2" img={`${H}/t-pierre.jpg`}/>
         <Quote q="Excellentissime, merci beaucoup à toi ! Tes partages sont inégalables et toujours généreux !" n="Laurent Berthelier" src="Le fichier contexte Claude" img={`${H}/t-laurent.jpg`}/>
         <Quote q="Même si je n'utilise pas LinkedIn comme toi. Je prends ! Tu as gagné un abonné ! Un super article !" n="Yoann" src="Le profil LinkedIn refait avec l'IA" img={`${H}/t-yoann.jpg`}/>
