@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"; import { Link } from "react-router-dom";
-import { Scribble, Arrow, A, SUB, AMAZON, PDF, amzRel, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
+import { Scribble, Arrow, A, SUB, PDF, useSeo, Reveal, SubscribeForm, Copy, Quote, Stats, CtaBand } from "../lib";
 import { guides, GuideCard, fdate, img } from "../guides";
 import { tools, DISCLOSURE } from "../data/tools";
 import { ToolCard } from "./Outils";
@@ -18,7 +18,7 @@ const outcomes = [
 const logos = ["Challenge", "FrenchWeb", "Hubspot", "WTTJ", "Livementor", "Eyrolles"];
 const H = "/img";
 export default function Home() {
-  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et prompts à copier. Gratuit, déjà 13 000 lecteurs.");
+  useSeo("Onur Karapinar | L'IA, vraiment simple", "Un guide IA de 10 minutes, une à deux fois par semaine. Pas à pas, avec captures et méthode détaillée. Gratuit, déjà 13 000 lecteurs.");
   const [tab, setTab] = useState(0);
   const full = prompts[0].p; const [n, setN] = useState(0);
   useEffect(() => { if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setN(full.length); return; } const t = setInterval(() => setN(x => x >= full.length + 40 ? 0 : x + 1), 38); return () => clearInterval(t); }, []);
@@ -30,7 +30,7 @@ export default function Home() {
         <Reveal><div className="inline-flex items-center gap-2 rounded-full border border-sable bg-white px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 animate-pulse rounded-full bg-terral"/>Salut, moi c'est Onur</div>
           <h1 className="mt-6 text-[2.9rem] leading-[1.02] md:text-[4.6rem]">L'IA, <Scribble>vraiment simple.</Scribble></h1>
           <p className="mt-6 max-w-[34ch] text-xl leading-relaxed text-ink/80">Une à deux fois par semaine, je t'envoie un guide qui règle un vrai problème de ton quotidien avec l'IA.</p>
-          <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et le prompt à copier.</p>
+          <p className="mt-6 text-base text-ink/80">Chaque guide : 10 minutes, des captures à chaque étape et la méthode détaillée.</p>
           <div className="mt-6"><SubscribeForm/></div>
           <div className="mt-4 flex items-center gap-3 text-sm text-ink/70"><div className="flex shrink-0 -space-x-2">{["t-hamac","t-pierre","t-laurent","t-yoann"].map(t => <img key={t} src={`${H}/${t}.jpg`} alt="Photo d'un lecteur" width="32" height="32" className="h-8 w-8 rounded-full border-2 border-creme object-cover"/>)}</div><span>Gratuit. <b className="text-ink">13 000 lecteurs</b>, 30 000 sur LinkedIn, auteur chez Eyrolles.</span></div>
           <p className="mt-2 text-sm text-ink/70">Déjà abonné ? <Link to="/commencer-ici" className="inline-block py-3 font-bold text-terra underline underline-offset-4">Commence ici</Link></p>
@@ -53,7 +53,7 @@ export default function Home() {
     </div></section>
     <section id="essaie" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24">
       <Reveal><div className="kicker">Essaie, là, tout de suite</div><h2 className="h2 mt-3">Choisis un prompt. <Scribble>Regarde</Scribble> ce qui se passe. <Arrow/></h2>
-        <p className="mt-3 max-w-2xl text-ink/70">Copie-le, colle-le dans ChatGPT ou Claude. Si ça te fait sourire, imagine un guide entier.</p></Reveal>
+        <p className="mt-3 max-w-4xl text-ink/70">Copie-le, colle-le dans ChatGPT ou Claude. Si ça te fait sourire, <span className="whitespace-nowrap">imagine un guide entier.</span></p></Reveal>
       <Reveal className="mt-8 grid gap-5 md:grid-cols-[.8fr_1.2fr]">
         <div role="tablist" className="flex gap-3 overflow-x-auto pb-2 md:flex-col md:overflow-visible">
           {prompts.map((p, i) => <button key={i} role="tab" aria-selected={tab === i} onClick={() => setTab(i)} className={"min-w-[220px] rounded-2xl border-2 p-4 text-left transition md:min-w-0 " + (tab === i ? "border-terra bg-white shadow-md" : "border-sable hover:border-ink/40")}><div className="font-bold">{p.t}</div><div className="text-sm text-ink/60">{p.s}</div></button>)}
@@ -104,9 +104,8 @@ export default function Home() {
       <Reveal><Link to="/livre"><img src={`${A}/livre-couverture.jpg`} alt="Couverture du livre Petites Habitudes, Grandes Réussites" loading="lazy" className="mx-auto w-48 -rotate-3 rounded shadow-2xl transition hover:rotate-0 md:w-60"/></Link></Reveal>
       <Reveal delay={100}><div className="kicker">Le livre</div><h2 className="h2 mt-3">Avant l'IA, j'ai écrit un livre sur les habitudes.</h2>
         <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 15 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
-        <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link>{PDF && <a href={PDF} className="btn-ghost">Lire les 27 premières pages</a>}</div>
-        <a href={AMAZON} rel={amzRel} className="mt-3 inline-flex min-h-[44px] items-center text-sm text-ink/60 underline">Voir sur Amazon</a></Reveal>
+        <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link>{PDF && <a href={PDF} className="btn-ghost">Lire les 27 premières pages</a>}</div></Reveal>
     </div></section>
-    <CtaBand title="Le prochain guide part bientôt. Il t'attend ?" text="Gratuit, une à deux fois par semaine. Promis, pas de spam, je n'ai pas le temps non plus."/>
+    <CtaBand title="Le prochain guide IA arrive bientôt. Il t'attend." text="Apprendre l'IA simplement, 10 minutes par guide. Gratuit, une à deux fois par semaine, et pas de spam, je n'ai pas le temps non plus."/>
   </>);
 }
