@@ -7,7 +7,7 @@ for (const [dev, vp] of [["ordinateur", { width: 1440, height: 900 }], ["mobile"
   p.on("response", r => { if (r.status() >= 400) errs.push(r.status() + " " + r.url()); });
   for (const [n, path] of [["accueil", "/"], ["livre", "/livre"], ["a-propos", "/a-propos"], ["guides", "/guides"], ["merci", "/merci"], ["404", "/nimporte-quoi"]]) {
     await p.goto(B + path, { waitUntil: "networkidle" });
-    await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 400) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 60)); } window.scrollTo(0, 0); });
+    await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 300) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 150)); } window.scrollTo(0, 0); });
     await p.waitForTimeout(800);
     const bad = await p.evaluate(() => [...document.images].filter(i => !i.complete || i.naturalWidth === 0).map(i => i.src));
     const ow = await p.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);

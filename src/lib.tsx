@@ -15,7 +15,7 @@ export function useSeo(title: string, desc: string) {
 }
 export function Reveal({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const r = useRef<HTMLDivElement>(null); const [v, setV] = useState(false);
-  useEffect(() => { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setV(true); o.disconnect(); } }, { threshold: 0.12 }); r.current && o.observe(r.current); return () => o.disconnect(); }, []);
+  useEffect(() => { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setV(true); o.disconnect(); } }, { threshold: 0, rootMargin: "0px 0px -40px 0px" }); r.current && o.observe(r.current); return () => o.disconnect(); }, []);
   return <div ref={r} style={{ transitionDelay: delay + "ms" }} className={"reveal " + (v ? "in " : "") + className}>{children}</div>;
 }
 export function SubscribeForm({ dark = false }: { dark?: boolean }) {
