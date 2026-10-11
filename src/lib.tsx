@@ -48,7 +48,7 @@ export const Quote = ({ q, n, src, img }: { q: string; n: string; src: string; i
   </figure>
 );
 export const Stats = ({ items }: { items: [string, string][] }) => (
-  <div className="grid grid-cols-2 gap-6 md:grid-cols-5">{items.map(([n, l], i) => <Reveal key={l} delay={i * 80}><div className="font-display text-4xl font-extrabold tracking-tight text-ink md:text-5xl">{n}</div><div className="mt-1 text-sm text-ink/70">{l}</div></Reveal>)}</div>
+  <div className={`grid grid-cols-2 gap-6 ${items.length === 6 ? "md:grid-cols-3 lg:grid-cols-6" : "md:grid-cols-5"}`}>{items.map(([n, l], i) => <Reveal key={l} delay={i * 80}><div className="font-display text-4xl font-extrabold tracking-tight text-ink md:text-5xl">{n}</div><div className="mt-1 text-sm text-ink/70">{l}</div></Reveal>)}</div>
 );
 export function CtaBand({ title, text }: { title: string; text: string }) {
   return <section className="bg-ink text-creme"><div className="mx-auto max-w-3xl px-5 py-20 text-center"><Reveal><h2 className="h2">{title}</h2><p className="mx-auto mt-4 max-w-xl text-creme/80">{text}</p><div className="mt-8 flex justify-center"><SubscribeForm dark/></div></Reveal></div></section>;
