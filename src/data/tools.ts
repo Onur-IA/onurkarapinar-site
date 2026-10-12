@@ -7,7 +7,7 @@ export const all: Tool[] = [
   { n: "Grok", c: "IA", d: "L'assistant IA de xAI, pour chercher et créer au quotidien.", u: "https://grok.com/" },
   { n: "ChatGPT", c: "IA", d: "L'assistant le plus connu, pour tester les prompts du site en un clic.", u: "https://chatgpt.com/" },
   { n: "Gemini", c: "IA", d: "L'assistant IA de Google, utile aussi pour générer des images.", u: "https://gemini.google.com/", guide: S + "nano-banana-2-le-guide-pour-bien" },
-  { n: "Granola", c: "Écrire et dicter", d: "Il prend les notes de mes réunions pour que je reste dans la conversation.", u: "https://www.granola.ai/" },
+  { n: "Granola", c: "Écrire et dicter", d: "Il prend les notes de mes réunions pour que je reste dans la conversation.", u: "https://go.granola.ai/onur-karapinar", aff: true },
   { n: "Superwhisper", c: "Écrire et dicter", d: "Une autre app de dictée vocale, pour transformer ma voix en texte propre.", u: "https://superwhisper.com/" },
   { n: "Canva", c: "Créer", d: "Mes couvertures de newsletter et mes visuels, avec son générateur d'images.", u: "https://www.canva.com/" },
   { n: "CleanShot X", c: "Créer", d: "Les captures d'écran de mes guides, annotées en quelques secondes. Je l'ai via Setapp.", u: "https://cleanshot.com/" },
