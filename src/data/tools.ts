@@ -10,7 +10,7 @@ export const all: Tool[] = [
   { n: "Granola", c: "Écrire et dicter", d: "Il prend les notes de mes réunions pour que je reste dans la conversation.", u: "https://go.granola.ai/onur-karapinar", aff: true },
   { n: "Superwhisper", c: "Écrire et dicter", d: "Une autre app de dictée vocale, pour transformer ma voix en texte propre.", u: "https://superwhisper.com/" },
   { n: "Canva", c: "Créer", d: "Mes couvertures de newsletter et mes visuels, avec son générateur d'images.", u: "https://www.canva.com/" },
-  { n: "CleanShot X", c: "Créer", d: "Les captures d'écran de mes guides, annotées en quelques secondes. Je l'ai via Setapp.", u: "https://cleanshot.com/" },
+  { n: "CleanShot X", c: "Créer", d: "Les captures d'écran de mes guides, annotées en quelques secondes. Je l'utilise via Setapp, il existe aussi seul.", u: "https://go.cleanshot.com/onur-karapinar", aff: true },
   { n: "Setapp", c: "Organiser", d: "Un abonnement pour des dizaines d'apps Mac, dont CleanShot X et CleanMyMac.", u: "https://setapp.com/" },
   { n: "CleanMyMac", c: "Organiser", d: "Pour garder mon Mac propre et rapide.", u: "https://macpaw.com/cleanmymac" },
   { n: "Notion", c: "Organiser", d: "Mon espace pour organiser mes projets et mon contenu.", u: "https://www.notion.com/" },
