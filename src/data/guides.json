@@ -1,5 +1,14 @@
 [
  {
+  "slug": "configurer-claude",
+  "title": "Comment configurer Claude : 8 réglages pour qu'il se souvienne enfin de toi",
+  "subtitle": "Le guide débutant pour configurer Claude : mémoire, instructions, confidentialité, connecteurs.",
+  "date": "2026-10-14",
+  "cover": "https://substack-post-media.s3.amazonaws.com/public/images/b2fab72a-cfc4-4a23-a184-64d4badf0db5_1731x909.png",
+  "url": "https://onurkarapinar.substack.com/p/configurer-claude",
+  "desc": "Le guide débutant pour configurer Claude : mémoire, instructions, confidentialité, connecteurs. Huit réglages testés, un test simple après chaque étape."
+ },
+ {
   "slug": "claude-skills",
   "title": "Claude Skills : Le guide complet pour arrêter de retaper tes prompts",
   "subtitle": "Comment transformer tes prompts récurrents en commandes automatiques sur Claude :",
