@@ -1,5 +1,14 @@
 [
  {
+  "slug": "comment-tableau-de-bord-claude",
+  "title": "Claude Dashboards : transforme n'importe quel fichier en tableau de bord",
+  "subtitle": "Un fichier, une question, et Claude te montre quoi décider.",
+  "date": "2026-10-18",
+  "cover": "https://substack-post-media.s3.amazonaws.com/public/images/11d03eb0-e471-46e4-b792-dca675980871_2560x1440.png",
+  "url": "https://onurkarapinar.substack.com/p/comment-tableau-de-bord-claude",
+  "desc": "Un fichier, une question, et Claude te montre quoi décider. Le tuto en 5 étapes, les prompts à copier et 3 cas concrets."
+ },
+ {
   "slug": "configurer-claude",
   "title": "Comment configurer Claude : 8 réglages pour qu'il se souvienne enfin de toi",
   "subtitle": "Le guide débutant pour configurer Claude : mémoire, instructions, confidentialité, connecteurs.",
