@@ -11,7 +11,7 @@ export const all: Tool[] = [
   { n: "Superwhisper", c: "Écrire et dicter", d: "Une autre app de dictée vocale, pour transformer ma voix en texte propre.", u: "https://superwhisper.link/onur-karapinar", aff: true },
   { n: "Canva", c: "Créer", d: "Mes couvertures de newsletter et mes visuels, avec son générateur d'images.", u: "https://www.canva.com/" },
   { n: "CleanShot X", c: "Créer", d: "Les captures d'écran de mes guides, annotées en quelques secondes. Je l'utilise via Setapp, il existe aussi seul.", u: "https://go.cleanshot.com/onur-karapinar", aff: true },
-  { n: "ElevenLabs", c: "Créer", d: "Des voix IA ultra réalistes pour transformer un texte en voix off ou en podcast, en quelques clics.", u: "https://elevenlabs.io", aff: false },
+  { n: "ElevenLabs", c: "Créer", d: "Des voix IA ultra réalistes pour transformer un texte en voix off ou en podcast, en quelques clics.", u: "https://try.elevenlabs.io/y64lsjs1ku8g", aff: true },
   { n: "Setapp", c: "Organiser", d: "Un abonnement pour des dizaines d'apps Mac, dont CleanShot X et CleanMyMac.", u: "https://setapp.com/" },
   { n: "CleanMyMac", c: "Organiser", d: "Pour garder mon Mac propre et rapide.", u: "https://macpaw.com/cleanmymac" },
   { n: "Notion", c: "Organiser", d: "Mon espace pour organiser mes projets et mon contenu.", u: "https://www.notion.com/" },
