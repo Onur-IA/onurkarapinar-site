@@ -1,5 +1,14 @@
 [
  {
+  "slug": "claude-slides",
+  "title": "Claude Slides : de tes notes à un PowerPoint en 15 minutes",
+  "subtitle": "6 slides en 2 minutes, un PDF résumé avec ses sources, et l'export vers PowerPoint ou Google Slides. Même en gratuit.",
+  "date": "2026-10-25",
+  "cover": "https://substack-post-media.s3.amazonaws.com/public/images/814cc13a-62f4-426f-9669-48e0e63eb41b_1200x630.png",
+  "url": "https://onurkarapinar.substack.com/p/claude-slides",
+  "desc": "Tes notes deviennent une présentation propre en 15 minutes. Export vers PowerPoint ou Google Slides, même avec Claude gratuit."
+ },
+ {
   "slug": "limites-claude",
   "title": "Claude : 12 réglages pour ne plus toucher ta limite",
   "subtitle": "Fais durer ton abonnement Claude toute la semaine, sans payer un euro de plus.",
