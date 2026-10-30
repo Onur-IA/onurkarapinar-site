@@ -1,5 +1,14 @@
 [
  {
+  "slug": "memoire-de-claude-laisse-le-tinterviewer",
+  "title": "Mémoire de Claude : laisse-le t'interviewer pour qu'il te connaisse enfin",
+  "subtitle": "Une phrase à coller, 8 questions en cases à cocher, et tu n'as plus à te présenter à chaque conversation.",
+  "date": "2026-10-31",
+  "cover": "https://substack-post-media.s3.amazonaws.com/public/images/6c8743fa-c63e-4f07-843a-d85579849775_1200x630.png",
+  "url": "https://onurkarapinar.substack.com/p/memoire-de-claude-laisse-le-tinterviewer",
+  "desc": "Une phrase, 8 questions, et tu n'as plus à te présenter à Claude. Le prompt qui le fait t'interviewer pour remplir sa mémoire."
+ },
+ {
   "slug": "chatgpt-ou-claude",
   "title": "ChatGPT ou Claude : 6 tâches de la vraie vie pour choisir le bon",
   "subtitle": "Mêmes prompts, mêmes fichiers, un verdict par tâche. Et le seul abonnement à garder selon ton budget.",
