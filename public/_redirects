@@ -1,3 +1,15 @@
 /s/Petites_Habitudes_Grandes_Reussites___Extrait.pdf /extrait-petites-habitudes-grandes-reussites.pdf 301
-/* /index.html 200
 /prompts-brouillon /prompts 301
+/articles /guides 301
+/articles/* /guides 301
+/blog /guides 301
+/blog/* /guides 301
+/newsletter /commencer-ici 301
+/newsletter/* /commencer-ici 301
+/about /a-propos 301
+/contact /a-propos 301
+/productivit-maximale /livre 301
+/productivit-maximale/* /livre 301
+/resumes-de-livres /livre 301
+/resumes-de-livres/* /livre 301
+/* /index.html 200

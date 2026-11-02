@@ -1,0 +1,22 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Book",
+ "name": "Petites habitudes, grandes réussites",
+ "author": {
+  "@type": "Person",
+  "name": "Onur Karapinar"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Eyrolles"
+ },
+ "datePublished": "2019-03-07",
+ "isbn": "2212572018",
+ "url": "https://www.onurkarapinar.com/livre",
+ "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.5",
+  "bestRating": "5",
+  "ratingCount": "364"
+ }
+}

@@ -4,7 +4,7 @@ import Home from "./pages/Home"; import Livre from "./pages/Livre"; import AProp
 import Guides from "./pages/Guides"; import Merci from "./pages/Merci"; import NotFound from "./pages/NotFound"; import Prompts from "./pages/Prompts";
 import Outils from "./pages/Outils"; import Commencer from "./pages/Commencer"; import Mentions from "./pages/Mentions";
 import { SUB } from "./lib";
-const nav = [["/commencer-ici", "Commence ici"], ["/guides", "Guides"], ["/outils", "Outils"], ["/livre", "Livre"], ["/a-propos", "À propos"]];
+const nav = [["/commencer-ici", "Commence ici"], ["/guides", "Guides"], ["/prompts", "Prompts"], ["/outils", "Outils"], ["/livre", "Livre"], ["/a-propos", "À propos"]];
 export default function App() {
   const [open, setOpen] = useState(false); const loc = useLocation(); useEffect(() => setOpen(false), [loc]);
   return (<div className="flex min-h-screen flex-col font-sans">
@@ -27,7 +27,7 @@ export default function App() {
     </Routes></main>
     <footer className="bg-ink text-creme/80"><div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 text-sm md:grid-cols-3">
       <div><div className="text-lg font-extrabold text-creme">Onur<span className="text-terra">.</span></div><p className="mt-2">Je rends l'IA incroyablement simple. Un guide IA pas à pas de 10 minutes, une à deux fois par semaine.</p></div>
-      <div className="flex flex-col [&>a]:inline-flex [&>a]:min-h-[44px] [&>a]:items-center"><Link to="/commencer-ici">Commence ici</Link><Link to="/guides">Guides</Link><Link to="/outils">Outils</Link><Link to="/livre">Le livre</Link><Link to="/a-propos">À propos</Link><a href={SUB}>Newsletter</a></div>
+      <div className="flex flex-col [&>a]:inline-flex [&>a]:min-h-[44px] [&>a]:items-center"><Link to="/commencer-ici">Commence ici</Link><Link to="/guides">Guides</Link><Link to="/prompts">Prompts</Link><Link to="/outils">Outils</Link><Link to="/livre">Le livre</Link><Link to="/a-propos">À propos</Link><a href={SUB}>Newsletter</a></div>
       <div className="flex flex-col [&>a]:inline-flex [&>a]:min-h-[44px] [&>a]:items-center"><a href="https://www.linkedin.com/in/onurkarapinar/">LinkedIn</a><a href="https://onurkarapinar.substack.com">Substack</a><Link to="/mentions-legales">Mentions légales</Link><span className="mt-2 text-creme/50">© 2026 Onur Karapinar</span></div>
     </div></footer>
   </div>);
