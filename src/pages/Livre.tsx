@@ -58,7 +58,7 @@ const faq = [
 ];
 const Stars = ({ n = 4.5 }) => <span aria-hidden="true" className="text-terral">{"★★★★★".slice(0, Math.floor(n))}{n % 1 ? <span style={{ background: "linear-gradient(90deg,#D96A4E 50%,#E8E2D6 50%)", WebkitBackgroundClip: "text", color: "transparent" }}>★</span> : null}</span>;
 export default function Livre() {
-  useSeo("Petites habitudes, grandes réussites | Le livre d'Onur Karapinar", "51 habitudes concrètes et une méthode en 7 étapes pour les installer. Plus de 15 000 exemplaires, 4,5/5 sur 364 avis Amazon. Lis les 27 premières pages gratuitement.");
+  useSeo("Petites habitudes, grandes réussites | Le livre d'Onur Karapinar", "51 habitudes concrètes et une méthode en 7 étapes pour les installer. Plus de 17 000 exemplaires, 4,5/5 sur 364 avis Amazon. Lis les 27 premières pages gratuitement.");
   const [open, setOpen] = useState<number | null>(null);
   const toBuy = () => document.getElementById("acheter")?.scrollIntoView({ behavior: "smooth" });
   return (<div className="pb-20 md:pb-0">
@@ -71,7 +71,7 @@ export default function Livre() {
         <p className="mt-3 text-sm text-ink/70">Eyrolles, 2019 · 310 pages · broché, Kindle et audio · préface de Benoît Wojtenka</p></Reveal>
     </section>
     <section className="border-y border-sable bg-white"><div className="mx-auto grid max-w-5xl grid-cols-2 gap-6 px-5 py-10 text-center md:grid-cols-4">
-      {[["15 000+", "exemplaires vendus"], ["4,5 / 5", "sur 364 avis Amazon"], ["66 %", "d'avis 5 étoiles"], ["3 ans", "de recherche et d'écriture"]].map(([a, b], i) => <Reveal key={b} delay={i * 80}><div className="font-display text-3xl font-extrabold text-ink">{a}</div><div className="text-sm text-ink/70">{b}</div></Reveal>)}
+      {[["17 000+", "exemplaires vendus"], ["4,5 / 5", "sur 364 avis Amazon"], ["66 %", "d'avis 5 étoiles"], ["3 ans", "de recherche et d'écriture"]].map(([a, b], i) => <Reveal key={b} delay={i * 80}><div className="font-display text-3xl font-extrabold text-ink">{a}</div><div className="text-sm text-ink/70">{b}</div></Reveal>)}
     </div></section>
     <section className="mx-auto max-w-6xl px-5 py-20"><Reveal><div className="kicker">Ils l'ont lu avant toi</div><h2 className="h2 mt-3">Mot pour mot, en quatrième de couverture.</h2></Reveal>
       <div className="mt-10 grid gap-6 md:grid-cols-3">{recos.map((r, i) => <Reveal key={r.n} delay={i * 100}><figure className="card h-full p-6"><blockquote>« <Hl t={r.q}/> »</blockquote><figcaption className="mt-5 flex items-center gap-3"><img src={`${A}/reco-${r.f}.jpg`} alt={`Photo de ${r.n}`} width="48" height="48" loading="lazy" className="h-12 w-12 rounded-full object-cover"/><span className="text-sm"><b>{r.n}</b><br/><span className="text-ink/70">{r.r}</span></span></figcaption></figure></Reveal>)}</div>
