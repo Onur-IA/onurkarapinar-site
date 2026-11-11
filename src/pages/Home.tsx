@@ -53,7 +53,7 @@ export default function Home() {
   return (<>
     <HeroSection typed={typed}/>
     <section className="border-y border-sable bg-white"><div className="mx-auto max-w-6xl px-5 py-12">
-      <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["17 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "personnes accompagnées"]]}/>
+      <Stats items={[["13 000", "lecteurs de la newsletter"], ["30 000", "abonnés LinkedIn"], ["20 000+", "livres vendus"], ["100+", "clients coachés"], ["500+", "personnes accompagnées"]]}/>
       <div className="mt-12 text-center text-sm font-semibold uppercase tracking-[.18em] text-ink/70">On a parlé de moi dans</div>
       <div className="mt-4 grid grid-cols-3 items-center gap-x-6 gap-y-4 md:grid-cols-6">{logos.map(l => <div key={l} className="flex h-16 items-center justify-center"><img src={`${H}/logos-${l}.webp`} alt={`Logo ${l}`} loading="lazy" style={{ height: `${LOGO_H[l] ?? 28}px` }} className="w-auto max-w-[110px] object-contain transition hover:scale-105 md:max-w-[140px]"/></div>)}</div>
     </div></section>
@@ -109,7 +109,7 @@ export default function Home() {
     <section className="bg-pale"><div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-24 md:grid-cols-[.6fr_1.4fr]">
       <Reveal><Link to="/livre"><img src={`${A}/livre-couverture.jpg`} alt="Couverture du livre Petites Habitudes, Grandes Réussites" loading="lazy" className="mx-auto w-48 -rotate-3 rounded shadow-2xl transition hover:rotate-0 md:w-60"/></Link></Reveal>
       <Reveal delay={100}><div className="kicker">Le livre</div><h2 className="h2 mt-3">Avant l'IA, j'ai écrit un livre sur les habitudes.</h2>
-        <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 17 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
+        <p className="mt-4 text-ink/80">51 pratiques, chacune découpée en petits gestes. Plus de 20 000 exemplaires vendus, 4,5 sur 5 sur Amazon (364 notes).</p>
         <div className="mt-6 flex flex-wrap gap-3"><Link to="/livre" className="btn">Découvrir le livre</Link>{PDF && <a href={PDF} className="btn-ghost">Lire les 27 premières pages</a>}</div></Reveal>
     </div></section>
     <CtaBand title="Le prochain guide IA arrive bientôt. Il t'attend." text="Apprendre l'IA simplement, 10 minutes par guide. Gratuit, une à deux fois par semaine, et pas de spam, je n'ai pas le temps non plus."/>
