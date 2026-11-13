@@ -102,7 +102,7 @@ export default function Home() {
       <Reveal><img src={`${A}/portrait-studio.webp`} alt="Onur Karapinar, sourire, sur fond bleu" width="640" height="640" loading="lazy" className="mx-auto w-full max-w-xs rotate-2 rounded-3xl object-cover shadow-xl"/></Reveal>
       <Reveal delay={100}><div className="kicker">Qui est derrière tout ça ?</div>
         <blockquote className="mt-4 text-2xl font-bold leading-snug">« Mon seul critère : quand tu refermes un guide, tu te sens plus intelligent qu'en l'ouvrant. »</blockquote>
-        <p className="mt-4 text-ink/80">Je m'appelle Onur. J'écris sur Internet depuis 2016 et je teste l'IA tous les jours depuis fin 2022. Je suis Head of Content chez France IA : je construis des workflows IA le matin et je te les explique le soir, sans jargon. Je fais les erreurs avant toi, c'est un peu mon métier.</p>
+        <p className="mt-4 text-ink/80">Je m'appelle Onur. Solopreneur et auteur, j'écris sur Internet depuis 2016 et je teste l'IA tous les jours depuis fin 2022. À travers la newsletter Apprendre l'IA, je construis des workflows et je te les explique sans jargon. Je fais les erreurs avant toi, c'est un peu mon métier.</p>
         <p className="mt-6 border-l-4 border-terral pl-5 text-lg font-bold leading-snug">Ma règle : si ta mère ne peut pas s'en servir, j'ai raté mon édition.</p>
         <Link to="/a-propos" className="mt-6 inline-flex min-h-[44px] items-center font-bold text-terra">Lire mon histoire →</Link></Reveal>
     </section>
