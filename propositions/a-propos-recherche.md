@@ -20,7 +20,7 @@ Règle : seuls les faits sourcés ci-dessous peuvent être publiés. Ce qui est 
 | Fin 2020 | Crée le Cercle Essentiel (communauté d'entrepreneurs), puis recentre sur le coaching individuel de dirigeants (« +50 dirigeants accompagnés depuis ce pivot »). | Post LinkedIn public |
 | Ensuite | Bootcamp LinkedIn pour indépendants. | LinkedIn public |
 | 2023 | Podcasts : La Percée ép. 259 (20 mars 2023, inclut un passage sur ChatGPT), Bonne Réputation ép. 24 (23 mai 2023), Systèmes ép. 13 (18 déc. 2023). Interview Organisologie : défi d'écrire 30 jours « qui a duré plus longtemps que prévu ». | podtail, castro.fm, organisologie.com |
-| Aujourd'hui | Newsletter « Apprendre l'IA » sur Substack, 1 à 2 mails par semaine ; 13 000+ lecteurs (LinkedIn). Solopreneur avec Apprendre l'IA, auteur chez Eyrolles. | Substack, LinkedIn ; formulation validée par Onur |
+| Aujourd'hui | Newsletter « Apprendre l'IA » sur Substack, 1 à 2 mails par semaine ; 13 000+ lecteurs (LinkedIn). Auteur d'Apprendre l'IA et de Petites habitudes, grandes réussites, formateur IA. | Substack, LinkedIn ; formulation validée par Onur |
 
 Chiffres du brouillon v7 à NE PAS publier sans source : « 600 000 impressions » (déjà retiré), « 12 millions de vues », « 100+ coachés, 500+ entrepreneurs formés » (LinkedIn dit seulement « +50 dirigeants »).
 
@@ -48,7 +48,7 @@ Constat sur les pages de référence (créateurs de newsletters et solopreneurs)
 9. CTA final et contact (« réponds à n'importe quel mail »).
 
 ## 4. Questions à poser à Onur
-1. Identité publique : solopreneur et auteur. Validé par Onur : la page ne mentionne pas de poste salarié.
+1. Identité publique : Auteur d'Apprendre l'IA et de Petites habitudes, grandes réussites, formateur IA. Validé par Onur.
 2. Ton histoire d'enfance (précarité, mère qui ne savait pas lire) : OK pour la raconter sur le site, en version courte ? Peut-on relier la règle « si ta mère ne peut pas s'en servir » à ta vraie mère ?
 3. Quel a été ton déclic IA précis (date, premier usage de ChatGPT, premier post) ? Le passage de La Percée en mars 2023 en parlait déjà.
 4. Chiffres publiables avec preuve : vues LinkedIn cumulées, nombre de personnes coachées ou formées, ventes Eyrolles exactes ?

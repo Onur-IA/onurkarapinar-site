@@ -11,7 +11,7 @@ const chapters: [string, string, string][] = [
   ["2017 à 2019", "Le livre", "Je lance Essentiel sur Medium et ma newsletter La Minute Essentielle. Début 2018, j'annonce en public que je vais écrire un livre. **Eyrolles m'appelle deux semaines plus tard.** En 2019 sort « Petites habitudes, grandes réussites », vendu à **plus de 20 000 exemplaires**."],
   ["2020 à 2026", "Transmettre", "Je crée le Cercle Essentiel, puis j'accompagne des entrepreneurs et des dirigeants pendant six ans. **Plus de 100 personnes coachées, plus de 500 accompagnées.**"],
   ["30 novembre 2022", "ChatGPT arrive", "J'écris sur Internet depuis 2016, alors je teste, je bidouille, je recommence. Un mentor me glisse : « **Onur, ne traîne pas, c'est le futur.** » Je n'ai pas traîné : je suis parmi **les premiers à parler d'IA sur LinkedIn**, et je lance la newsletter Apprendre l'IA."],
-  ["Aujourd'hui", "Solopreneur, auteur, et des tables pleines", "**Solopreneur** avec Apprendre l'IA, auteur chez Eyrolles, et bâtisseur de communautés : Aftermind et les Link Dinners. Toujours ce besoin de comprendre, puis de transmettre."],
+  ["Aujourd'hui", "Apprendre l'IA, un livre, et des tables pleines", "Auteur d'**Apprendre l'IA** (plus de 13 000 lecteurs) et de « Petites habitudes, grandes réussites » chez Eyrolles, créateur de systèmes IA, et bâtisseur de communautés : Aftermind et les Link Dinners. Toujours ce besoin de comprendre, puis de transmettre."],
 ];
 const facts = [
   "J'ai parcouru plus de 500 livres et j'en ai résumé plus de 120 sur Medium.",
@@ -40,11 +40,11 @@ const album: [string, string, string][] = [
 ];
 const Accent = ({ children }: { children: React.ReactNode }) => <span className="accent">{children}<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 45 3, 95 12, 140 6 S 185 5, 197 8" fill="none" stroke="#D96A4E" strokeWidth="3.5" strokeLinecap="round"/></svg></span>;
 export default function APropos() {
-  useSeo("À propos | Onur Karapinar", "Solopreneur, auteur chez Eyrolles, fondateur d'Aftermind et des Link Dinners. Curieux de tout, surtout des gens et de l'IA.");
+  useSeo("À propos | Onur Karapinar", "Auteur d'Apprendre l'IA et d'un best-seller chez Eyrolles, fondateur d'Aftermind et des Link Dinners. J'apprends aux pros à maîtriser l'IA sans coder.");
   return (<>
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.2fr_.8fr] md:py-20 [&>*]:min-w-0">
       <Reveal><div className="kicker">Salut, moi c'est Onur</div><h1 className="mt-4 break-words text-[2rem] font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">Curieux de tout. Surtout <span className="whitespace-nowrap"><Accent>des gens</Accent>.</span> Et <span className="whitespace-nowrap"><Accent>de l'IA</Accent>.</span></h1>
-        <p className="mt-5 text-lg text-ink/80">Solopreneur, auteur d'un best-seller (« Petites habitudes, grandes réussites », plus de 20 000 exemplaires), fondateur d'Aftermind et des Link Dinners. Ce que j'aime le plus : provoquer de l'<b>inattendu positif</b> autour de moi.</p>
+        <p className="mt-5 text-lg text-ink/80">Auteur d'Apprendre l'IA (13 000+ lecteurs) et d'un best-seller chez Eyrolles (« Petites habitudes, grandes réussites », plus de 20 000 exemplaires), fondateur d'Aftermind et des Link Dinners. J'apprends aux pros à maîtriser l'IA sans coder, et ce que j'aime le plus : provoquer de l'<b>inattendu positif</b> autour de moi.</p>
         <div className="mt-7"><SubscribeForm/></div><p className="mt-3 text-sm text-ink/70">Ma newsletter Apprendre l'IA. Gratuit, 13 000 lecteurs.</p></Reveal>
       <Reveal delay={150}><img src={`${A}/portrait-costume-960.webp`} srcSet={`${A}/portrait-costume-640.webp 640w, ${A}/portrait-costume-960.webp 960w`} sizes="(min-width:768px) 384px, 88vw" alt="Portrait d'Onur Karapinar en costume" width="960" height="960" fetchPriority="high" className="mx-auto w-full max-w-sm rounded-3xl object-cover shadow-xl"/></Reveal>
     </section>
