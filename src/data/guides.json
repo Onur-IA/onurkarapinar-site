@@ -1,5 +1,14 @@
 [
  {
+  "slug": "claude-fable",
+  "title": "Fable 5.2 : le guide pour bien prendre en main le nouveau Claude",
+  "subtitle": "Ce qu’il sait faire, quand le choisir plutôt qu’Opus, et comment lui confier ton plus gros projet sans gaspiller ton quota.",
+  "date": "2026-11-15",
+  "cover": "https://substack-post-media.s3.amazonaws.com/public/images/b4a4623c-640b-42a4-b96e-ef799d7e9081_1200x630.png",
+  "url": "https://onurkarapinar.substack.com/p/claude-fable",
+  "desc": "Ce que vaut Fable 5.2, quand l’utiliser plutôt qu’Opus et comment lui confier un gros projet en 2 minutes sans brûler ton quota."
+ },
+ {
   "slug": "claude-gratuit-guide",
   "title": "Claude gratuit : ce qu'il sait faire sans que tu paies un euro",
   "subtitle": "Cinq tâches de la vraie vie, testées sans carte bancaire, avec le même Sonnet 5.5 que les abonnés. Et savoir quand payer vaut le coup.",
