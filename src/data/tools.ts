@@ -13,6 +13,7 @@ export const all: Tool[] = [
   { n: "CleanShot X", c: "Créer", d: "Les captures d'écran de mes guides, annotées en quelques secondes. Je l'utilise via Setapp, il existe aussi seul.", u: "https://go.cleanshot.com/onur-karapinar", aff: true },
   { n: "ElevenLabs", c: "Créer", d: "Des voix IA ultra réalistes pour transformer un texte en voix off ou en podcast, en quelques clics.", u: "https://try.elevenlabs.io/y64lsjs1ku8g", aff: true },
   { n: "Setapp", c: "Organiser", d: "Un abonnement pour des dizaines d'apps Mac, dont CleanShot X et CleanMyMac.", u: "https://setapp.sjv.io/qWKEbj", aff: true },
+  { n: "Alan", c: "Organiser", d: "Ma mutuelle santé, gérée entièrement depuis l'app. Avec mon lien, tu as 1 mois offert.", u: "https://alan.com/r/kuletoji", aff: true },
   { n: "CleanMyMac", c: "Organiser", d: "Pour garder mon Mac propre et rapide.", u: "https://macpaw.com/cleanmymac" },
   { n: "Notion", c: "Organiser", d: "Mon espace pour organiser mes projets et mon contenu.", u: "https://www.notion.com/" },
   { n: "Obsidian", c: "Organiser", d: "Mon second cerveau : toutes mes notes, en fichiers simples.", u: "https://obsidian.md/" },
